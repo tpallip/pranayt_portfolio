@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pranay Tummalapalli</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="header.css" />
@@ -10,168 +10,183 @@
     <link rel="stylesheet" href="about.css" />
     <link rel="stylesheet" href="experience.css" />
     <link rel="stylesheet" href="mediaqueries" />
-
-</head>
-<body>
-    <nav id="desktop-nav">
-        <div>
-            <ul class="nav-links">
-                <li><a href="#home" 
-                       class="nav-links" 
-                       onclick="toggleMenu()">Home</a></li>
-                <li><a href="#about" 
-                       class="nav-links"
-                       onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" 
-                       class="nav-links"
-                       onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" 
-                       class="nav-links"
-                       onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact&socials" 
-                       class="nav-links"
-                       onclick="toggleMenu()">Contact & Socials</a></li>
-            </ul>
-        </div>
+  </head>
+  <body>
+    <nav id="desktop-nav" class="desktop-nav">
+      <div>
+        <ul class="nav-links">
+          <li>
+            <a href="#home" class="nav-links" onclick="toggleMenu()">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-links" onclick="toggleMenu()">About</a>
+          </li>
+          <li>
+            <a href="#experience" class="nav-links" onclick="toggleMenu()"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-links" onclick="toggleMenu()"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact&socials" class="nav-links" onclick="toggleMenu()"
+              >Contact & Socials</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!--Profile Landing Page-->
-    <section id="home">
-        <div class="profile-home">
-            <!--intro container for text and buttons-->
-            <div class="intro-container">
-                <p class="hello">Hello</p>
-                <p class="im">I'm</p>
-                <p class="name-designator"><span class="first-name">Pranay</span> Tummalapalli</p>
-                <p class="role-designator">Embedded Software Engineer</p>
-                <div class="button-container">
-                    <button class="resume-btn"
-                            onclick="window.open('./assets/resume.pdf')">
-                    Resume</button>
-                    <button class="contact-btn" 
-                            onclick="location.href='./#contact'">
-                    Contact</button>
-                </div>
-                <div class="scroll-arrow">Scroll <span class="arrow">&darr;</span></div>
-            </div>
-            
-            <!--container for image-->
-            <div class="pic-container">
-                <img class="profile-pic"
-                    src="./assets/about-landing-profile/profile-pic-transparent.png" 
-                    alt="Pranay Tummalapalli Profile Picture">
-            </div>
+    <section class="home" id="home">
+      <div class="profile-home">
+        <!--intro container for text and buttons-->
+        <div class="intro-container">
+          <p class="hello">Hello</p>
+          <p class="im">I'm</p>
+          <p class="name-designator">
+            <span class="first-name">Pranay</span> Tummalapalli
+          </p>
+          <p class="role-designator">Embedded Software Engineer</p>
+          <div class="button-container">
+            <button
+              class="resume-btn"
+              onclick="window.open('./assets/resume.pdf')"
+            >
+              Resume
+            </button>
+            <button class="contact-btn" onclick="location.href='./#contact'">
+              Contact
+            </button>
+          </div>
+          <div class="scroll-arrow">
+            Scroll <span class="arrow">&darr;</span>
+          </div>
         </div>
+      </div>
+
+      <div>
+        <!--container for image-->
+        <div class="pic-container">
+          <img
+            class="profile-pic"
+            src="./assets/about-landing-profile/profile-pic-transparent.png"
+            alt="Pranay Tummalapalli Profile Picture"
+          />
+        </div>
+      </div>
     </section>
 
-
     <!--About section-->
-    <section id="about">
-        <div class="about-page">
-            <div class="about-profile-picture">
-                <img class="about-pic"
-                     src="./assets/about-landing-profile/linefollower-profile-pic.png"
-                     alt="About Profile Pic"/>
-            </div>
-            <div class="about-text">
-                <p class="about-me">About Me</p>
-                <p class="hey-there">Hey There,</p>
-                <p class="about-content"><span class="name">I'm Pranay Tummalapalli,</span>
-                    an Embedded software and control systems enthusiast with around 3+ years 
-                    of experience in Medical robotics. I’m deeply Passionate about robotic 
-                    control system design and development.<br><br> I have worked on a variety of 
-                    projects from humanoid upper body limbs all the way to robotic assisted 
-                    surgery for laparoscopic and orthopaedic surgery. <br><br>I am a classically 
-                    trained tabla player and spend my leisure hours hitting the badminton court.
-                </p>
-            </div>
-        </div> 
+    <section id="about" class="about">
+      <div class="about-page">
+        <div class="about-profile-picture">
+          <img
+            class="about-pic"
+            src="./assets/about-landing-profile/linefollower-profile-pic.png"
+            alt="About Profile Pic"
+          />
+        </div>
+        <div class="about-text">
+          <p class="about-me">About Me</p>
+          <p class="hey-there">Hey There,</p>
+          <p class="about-content">
+            <span class="name">I'm Pranay Tummalapalli,</span> an Embedded
+            software and control systems enthusiast with around 3+ years of
+            experience in Medical robotics. I’m deeply Passionate about robotic
+            control system design and development.<br /><br />
+            I have worked on a variety of projects from humanoid upper body
+            limbs all the way to robotic assisted surgery for laparoscopic and
+            orthopaedic surgery. <br /><br />I am a classically trained tabla
+            player and spend my leisure hours hitting the badminton court.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!--Experience Section Timeline-->
     <section id="experience">
-        <div class="experience-timeline">
-            <div class="left-side">
-                <!--Meril Timestamp-->
-                <div class="year-container-left">
-                    <p class="year">Nov 2023 - Present</p>
-                    <p class="location">IITM Research Park, Chennai, India</p>
-                </div>
-                <!--Articulus Role 2-->
-                <div class="role-container">
-                    <p class="role">Robotics Systems Engineer</p>
-                    <p class="company">Articulus Surgical</p>
-                    <p class="project">Robot Assisted Surgery</p>
-                    <p class="stack">Articulus Stack</p>
-                </div>
-                <!--Articulus Role 1 Timestamp-->
-                <div class="year-container-left">
-                    <p class="year">Nov 2021 - Jan 2023</p>
-                    <p class="location">Bengaluru, India</p>
-                </div>
-                <!--Akshar Role-->
-                <div class="role-container">
-                    <p class="role">Mechatronics Engg, Co-Founder</p>
-                    <p class="company">Akshar Bionics</p>
-                    <p class="project">Robotic Arm For Sign Language</p>
-                    <p class="stack">Akshar Stack</p>
-                </div>
-                <!--Trestle Timestamp-->
-                <div class="year-container-left">
-                    <p class="year">Feb 2020 - Jul 2020</p>
-                    <p class="location">New Delhi, India</p>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="vertical-line"></div>
-                <div class="circles">
-                    <div class="circle1"></div>
-                    <div class="circle2"></div>
-                    <div class="circle3"></div>
-                    <div class="circle4"></div>
-                    <div class="triangle-up"></div>
-                </div>
-                
-
-            </div>
-            <div class="right-side">
-                <!--Meril Role-->
-                <div class="role-container">
-                    <p class="role">Sr. Embedded Software Engineer</p>
-                    <p class="company">Meril Healthcare</p>
-                    <p class="project">Robot Assisted Surgery</p>
-                    <p class="stack">Meril Stack</p>
-                </div>
-                <!--Articulus 2 Timestamp-->
-                <div class="year-container-right">
-                    <p class="year">Jan 2023 - Nov 2023</p>
-                    <p class="location">Bengaluru, India</p>
-                </div>
-                <!--Articulus Role 1-->
-                <div class="role-container">
-                    <p class="role">Mechatronics Engineer</p>
-                    <p class="company">Articulus Surgical</p>
-                    <p class="project">Robot Assisted Surgery</p>
-                    <p class="stack">Articulus Stack</p>
-                </div>
-                <!--Akshar Timestamp-->
-                <div class="year-container-right">
-                    <p class="year">Jan 2021 - Oct 2021</p>
-                    <p class="location">Bengaluru, India</p>
-                </div>
-                <!--Trestle Role-->
-                <div class="role-container">
-                    <p class="role">Product Design Intern</p>
-                    <p class="company">Trestle Labs</p>
-                    <p class="project">Kibo Reader For Visually Impaired</p>
-                    <p class="stack">Trestle Stack</p>
-                </div>
-            </div>
+      <div class="experience-timeline">
+        <div class="left-side">
+          <!--Meril Timestamp-->
+          <div class="year-container-left">
+            <p class="year">Nov 2023 - Present</p>
+            <p class="location">IITM Research Park, Chennai, India</p>
+          </div>
+          <!--Articulus Role 2-->
+          <div class="role-container">
+            <p class="role">Robotics Systems Engineer</p>
+            <p class="company">Articulus Surgical</p>
+            <p class="project">Robot Assisted Surgery</p>
+            <p class="stack">Articulus Stack</p>
+          </div>
+          <!--Articulus Role 1 Timestamp-->
+          <div class="year-container-left">
+            <p class="year">Nov 2021 - Jan 2023</p>
+            <p class="location">Bengaluru, India</p>
+          </div>
+          <!--Akshar Role-->
+          <div class="role-container">
+            <p class="role">Mechatronics Engg, Co-Founder</p>
+            <p class="company">Akshar Bionics</p>
+            <p class="project">Robotic Arm For Sign Language</p>
+            <p class="stack">Akshar Stack</p>
+          </div>
+          <!--Trestle Timestamp-->
+          <div class="year-container-left">
+            <p class="year">Feb 2020 - Jul 2020</p>
+            <p class="location">New Delhi, India</p>
+          </div>
         </div>
-        
+        <div class="timeline">
+          <div class="vertical-line"></div>
+          <div class="circles">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+            <div class="triangle-up"></div>
+          </div>
+        </div>
+        <div class="right-side">
+          <!--Meril Role-->
+          <div class="role-container">
+            <p class="role">Sr. Embedded Software Engineer</p>
+            <p class="company">Meril Healthcare</p>
+            <p class="project">Robot Assisted Surgery</p>
+            <p class="stack">Meril Stack</p>
+          </div>
+          <!--Articulus 2 Timestamp-->
+          <div class="year-container-right">
+            <p class="year">Jan 2023 - Nov 2023</p>
+            <p class="location">Bengaluru, India</p>
+          </div>
+          <!--Articulus Role 1-->
+          <div class="role-container">
+            <p class="role">Mechatronics Engineer</p>
+            <p class="company">Articulus Surgical</p>
+            <p class="project">Robot Assisted Surgery</p>
+            <p class="stack">Articulus Stack</p>
+          </div>
+          <!--Akshar Timestamp-->
+          <div class="year-container-right">
+            <p class="year">Jan 2021 - Oct 2021</p>
+            <p class="location">Bengaluru, India</p>
+          </div>
+          <!--Trestle Role-->
+          <div class="role-container">
+            <p class="role">Product Design Intern</p>
+            <p class="company">Trestle Labs</p>
+            <p class="project">Kibo Reader For Visually Impaired</p>
+            <p class="stack">Trestle Stack</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-   
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

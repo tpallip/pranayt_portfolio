@@ -1,137 +1,164 @@
-.profile-home{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;  
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  /* padding: 64px; */
+  /* background-color: yellow; */
+}
+
+.profile-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 64px;
 }
 
 /*TEXT ON HOME PAGE*/
-.intro-container{
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Center items vertically (if needed) */
-    align-items: right; /* Align items to the right (end) */
-    height: 200px; /* Set a height for vertical centering */
-    margin: 0; /* Center the container itself */
-    text-align: left; /* Align text to the right */
-    padding: 20px; /* Optional: add some padding for spacing */
-    margin-left: 500px;
+.intro-container {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /*Center items vertically (if needed) */
+  align-items: right; /* Align items to the right (end) */
+  /* height: 200px; Set a height for vertical centering */
+  /* margin: 0; Center the container itself */
+  text-align: left; /* Align text to the right */
+  padding: 0px; /* Optional: add some padding for spacing */
 
+  /* margin-left: 500px; */
 }
 
-.hello{
-    color: #424242;
-    font-size: 350px;
-    font-weight: 200;
-    height: 450px;
-    margin-top: -350px;
+.hello {
+  color: #424242;
+  font-size: 120px;
+  font-weight: 200;
+  /* height: 450px; */
+  /* margin-top: -350px; */
 }
 
-.im{
-    color: #727070;
-    font-size: 60px;
-    font-weight: 350;
+.im {
+  color: #727070;
+  font-size: 40px;
+  font-weight: 350;
 }
 
-.name-designator{
-    color: #727070;
-    font-size: 70px;
-    font-weight: 350;
+.name-designator {
+  color: #727070;
+  font-size: 50px;
+  font-weight: 400;
 }
 
-.first-name{
-    color: #424242;
-    font-size: 70px;
-    font-weight: 350;
+.first-name {
+  color: #424242;
+  font-size: 50px;
+  font-weight: 400;
 }
 
-.role-designator{
-    color: #727070;
-    font-size: 40px;
-    font-weight: 350;
+.role-designator {
+  color: #727070;
+  font-size: 40px;
+  font-weight: 350;
 }
 
 /*BUTTONS*/
-.resume-btn{
-    font-size: 40px;
-    margin-top: 40px;
-    background-color: white;
-    color: #999999;
-    border-color: #999999;
-    border-style: solid;
-    border-width: 4px;
-    height: 80px;
-    width: 250px;
-    border-radius: 40px;    
-    cursor: pointer;
-    margin-left: 10px;
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 32px;
 }
 
-.contact-btn{
-    font-size: 40px;
-    margin-top: 40px;
-    background-color: #999999;
-    color: white;
-    border-style: none;
-    height: 80px;
-    width: 250px;
-    border-radius: 40px;
-    cursor: pointer;
-    margin-left: 40px;
+.resume-btn {
+  font-size: 32px;
+  /* margin-top: 40px; */
+  background-color: white;
+  color: #999999;
+
+  /* border-color: #999999;
+  border-style: solid;
+  border-width: 4px; */
+
+  border: 4px solid #999; /*use this instead of writing 3 lines*/
+  padding: 8px 16px;
+  /* height: 80px;
+  width: 250px; */
+  border-radius: 24px;
+  cursor: pointer;
+  /* margin-left: 10px; */
 }
 
+.contact-btn {
+  font-size: 32px;
+  /* margin-top: 40px; */
+  background-color: #999999;
+  color: white;
 
-.resume-btn:hover{
-    opacity: 0.3;
-    transition: 200ms ease;
+  /* border-color: #999999;
+  border-style: solid; */
+
+  border: 4px solid #999;
+
+  /* height: 80px;
+  width: 250px; */
+
+  padding: 8px 16px;
+  border-radius: 24px;
+  cursor: pointer;
+  /* margin-left: 40px; */
 }
 
-.contact-btn:hover{
-    opacity: 0.3;
-    transition: 200ms ease;
+.resume-btn:hover {
+  opacity: 0.3;
+  transition: 200ms ease;
 }
 
-.contact-btn:active{
-    opacity: 0;
-    transition: 200ms ease;
+.contact-btn:hover {
+  opacity: 0.3;
+  transition: 200ms ease;
 }
 
-.resume-btn:active{
-    opacity: 0;
-    transition: 200ms ease;
+.contact-btn:active {
+  opacity: 0;
+  transition: 200ms ease;
+}
+
+.resume-btn:active {
+  opacity: 0;
+  transition: 200ms ease;
 }
 
 /*SCROLL*/
-.scroll-arrow{
-    position: fixed;
-    font-size: 30px;
-    font-weight: 500;
-    color: #727070;
-    margin-top: 600px;
-    z-index: 1000;
+.scroll-arrow {
+  position: fixed;
+  font-size: 20px;
+  font-weight: 500;
+  color: #727070;
+  margin-top: 500px;
+  z-index: 1000;
 }
 
-.arrow{
-    position: fixed;
-    font-size: 40px;
-    font-weight: 600;
-    color: #727070;
-    margin-top: -10px;
-    margin-left: 10px;
-    z-index: 1000;
+.arrow {
+  position: fixed;
+  font-size: 20px;
+  font-weight: 600;
+  color: #727070;
+  /* margin-top: -10px; */
+  margin-left: 5px;
+  z-index: 1000;
 }
 /*PROFILE PIC*/
-.pic-container{
-    display: flex;
-    flex: 1.2;
-    width: 1300px;
-    overflow: hidden;
+.pic-container {
+  /* display: flex; */
+  /* flex: 1.2; */
+  width: 100%;
+  /* overflow: hidden; */
 }
 
-.profile-pic{
-    width: 1200px;
-    object-fit: contain;
-    margin-top: 60px;
-    border-radius: 200px;
+.profile-pic {
+  width: 100%;
+  object-fit: contain;
+  /* margin-top: 60px; */
+  padding: 32px;
+  border-radius: 200px;
 }
-
