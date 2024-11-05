@@ -109,12 +109,12 @@
 }
 
 .resume-btn:hover {
-  opacity: 0.3;
+  opacity: 0.5;
   transition: 200ms ease;
 }
 
 .contact-btn:hover {
-  opacity: 0.3;
+  opacity: 0.5;
   transition: 200ms ease;
 }
 
