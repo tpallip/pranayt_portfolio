@@ -61,6 +61,15 @@
   animation-delay: 4s;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+a {
+  color: #000;
+}
+
 .container img {
   position: absolute;
   width: 20px;
