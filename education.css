@@ -15,12 +15,16 @@
 .education-details-left {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
 }
 
 .education-details-left p {
   font-size: 28px;
   font-weight: 250;
+}
+
+.education-details-left p:last-child {
+  font-size: 20px;
 }
 
 .education-details-left h1 {
@@ -42,34 +46,61 @@
   margin-top: 100px;
 }
 
-.top-education-desc,
-.bottom-education-desc {
-  display: flex;
+.education-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 64px 0px 64px;
+  margin-bottom: 100px;
 }
 
-.education-desc-text-area {
-  flex: 2;
-
+.education-desc-img {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-desc-img img {
+  width: 80%;
+  border-radius: 26px;
+}
+
+.education-details-left-below p {
+  font-size: 30px;
+  font-weight: 250;
+}
+
+.dev-student-club {
+  display: flex;
+  padding: 64px 0px;
   flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 100px;
 }
 
-.education-desc-text-area h1 {
-  font-family: Poppins;
-  font-size: 32px;
-  font-weight: 400;
+.dsc-heading {
   color: #848282;
+  font-weight: 400;
+  font-size: 32px;
 }
 
-.education-desc-text-area p {
+.dev-student-club p {
   text-align: justify;
-  color: #676565;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 30px;
 }
 
-.education-desc-blank-area {
-  flex: 1.5;
+.dsc-img {
+  width: 80%;
+  border-radius: 64px;
+}
+
+.dsc-videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+.dsc-videos img {
+  width: 30%;
 }

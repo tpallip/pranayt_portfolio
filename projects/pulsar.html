@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pranay Tummalapalli</title>
+    <link rel="stylesheet" href=".././style.css" />
+    <link rel="stylesheet" href=".././header.css" />
+    <link rel="stylesheet" href="./project.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav" class="desktop-nav">
+      <div>
+        <ul class="nav-links">
+          <li>
+            <a
+              href="../index.html#home"
+              class="nav-links"
+              onclick="toggleMenu()"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#about"
+              class="nav-links"
+              onclick="toggleMenu()"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#experience"
+              class="nav-links"
+              onclick="toggleMenu()"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#projects"
+              class="nav-links"
+              onclick="toggleMenu()"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#education"
+              class="nav-links"
+              onclick="toggleMenu()"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#social"
+              class="nav-links"
+              onclick="toggleMenu()"
+              >Social Work & Co-Curricular</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#contact"
+              class="nav-links"
+              onclick="toggleMenu()"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="project">
+      <div class="project-grid">
+        <div class="project-grid-left">
+          <p class="project-grid-subheading">Meril Endosurgery, 2024</p>
+          <h1 class="project-grid-heading">
+            EtherCAT based Motor Driver For BLDC Motor
+          </h1>
+          <p class="project-grid-tab">Emb. Software</p>
+          <p class="project-grid-tab">Controls</p>
+        </div>
+
+        <div class="project-grid-middle">
+          <p>
+            Firmware development for a motor driver to run a BLDC Motor in
+            position, velocity and torque control modes. Supports both 6-step
+            control and FOC for the Misso Surgical Robot.
+            <br />
+            <br />
+            <span class="text-subheading">Platform</span>
+            <br />
+            ASIX AX58400 Evaluation Board (Dual Core STM32H755x with Cortex M4
+            and Cortex M7). ST IHM08M1 3sh Motor Driver Hat.
+            <br />
+            <br />
+            PID Control for Position, Velocity and Torque
+            <br />
+            <br />
+            EtherCAT Slave design for User Interface.
+          </p>
+        </div>
+
+        <div class="project-grid-right">
+          <img src="./pulsar.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="skills-container">
+        <span>Embedded C</span>
+        <span>Motor Control</span>
+        <span>Control Systems</span>
+        <span>STM32CubeIDE</span>
+        <span>Beckhoff TwinCAT XAE</span>
+        <span>IgH Etherlabs EtherCAT Master</span>
+        <span>Octave</span>
+      </div>
+
+      <div class="project-videos">
+        <img src="./video-1.png" alt="" />
+        <img src="./video-1.png" alt="" />
+      </div>
+    </section>
+    <script src=".././script.js"></script>
+  </body>
+</html>

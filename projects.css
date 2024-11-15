@@ -1,0 +1,151 @@
+.projects {
+  padding: 60px 80px 40px 80px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.projects-heading {
+  text-align: center;
+  color: #727070;
+  font-weight: 300;
+  font-size: 38px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 120px;
+  column-gap: 120px;
+  row-gap: 60px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: #f8f8f8;
+  gap: 32px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.project:hover {
+  background-color: #e0e0e0;
+}
+
+.project img {
+  width: 50%;
+  border-radius: 28px;
+  display: block;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bfbfbf4b;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.project-desc {
+  padding: 32px;
+  font-size: 28px;
+  font-weight: 300;
+  z-index: 2;
+  position: relative;
+}
+
+.project-more {
+  font-weight: 400;
+  font-size: 60px;
+}
+
+/* Awards */
+
+.awards {
+  margin-top: 32px;
+}
+
+.awards-heading {
+  text-align: center;
+  color: #727070;
+  font-weight: 300;
+  font-size: 38px;
+}
+
+/* .awards-flex {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 100px;
+  margin: 32px 100px;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.award {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+}
+
+.award-time {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.award-name {
+  font-size: 30px;
+  font-weight: 400;
+} */
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-self: center;
+  justify-self: center;
+  gap: 32px;
+  margin-top: 64px;
+  padding: 0px 128px;
+}
+
+.award-date {
+  font-weight: 300;
+  font-size: 24px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  color: #424242;
+}
+
+.award-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+}
+
+.award-name {
+  font-size: 30px;
+  font-weight: 400;
+  color: #424242;
+}
+
+.award-desc {
+  font-size: 20px;
+  color: #727070;
+  font-weight: 300;
+}
