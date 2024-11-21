@@ -35,16 +35,29 @@
   height: 100%;
 }
 
+/* Add slight zoom-in effect on hover */
 .project:hover {
   background-color: #e0e0e0;
 }
 
 .project img {
   width: 50%;
-  border-radius: 28px;
+  border-radius: 64px;
   display: block;
+  transition: transform 0.3s; /* Smooth image zoom */
+  padding: 32px;
 }
 
+.project-desc {
+  padding: 0px;
+  font-size: 24px;
+  font-weight: 300;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+/* Overlay effect */
 .project::before {
   content: "";
   position: absolute;
@@ -52,27 +65,39 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #bfbfbf4b;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
   z-index: 1;
-  pointer-events: none;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
   border-radius: inherit;
 }
 
-.project-desc {
-  padding: 32px;
-  font-size: 28px;
-  font-weight: 300;
+/* Show overlay on hover */
+.project:hover::before {
+  opacity: 1;
+}
+
+/* "More" text overlay */
+.project::after {
+  content: "More";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
   z-index: 2;
-  position: relative;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
 }
 
-.project-more {
-  font-weight: 400;
-  font-size: 60px;
+/* Show "More" text on hover */
+.project:hover::after {
+  opacity: 1;
 }
 
-/* Awards */
-
+/* Awards Section */
 .awards {
   margin-top: 32px;
 }
@@ -84,48 +109,22 @@
   font-size: 38px;
 }
 
-/* .awards-flex {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 100px;
-  margin: 32px 100px;
-  gap: 32px;
-  align-items: center;
-  justify-content: center;
-}
-
-.award {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 100px;
-}
-
-.award-time {
-  font-weight: 300;
-  font-size: 24px;
-}
-
-.award-name {
-  font-size: 30px;
-  font-weight: 400;
-} */
-
 .awards-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-self: center;
   justify-self: center;
-  gap: 32px;
-  margin-top: 64px;
+  column-gap: 64px;
+  row-gap: 128px;
+  margin-top: 80px;
   padding: 0px 128px;
 }
 
 .award-date {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 30px;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   color: #424242;
 }

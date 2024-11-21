@@ -92,7 +92,7 @@ a {
   border-radius: 6px;
   font-size: 16px;
   transition: all 0.3s;
-  border: 2px solid #bebebe;
+  /* border: 2px solid #bebebe; */
 }
 
 .text-box:hover {
@@ -174,4 +174,8 @@ a {
   100% {
     opacity: 1;
   }
+}
+
+.time-right-align {
+  text-align: right;
 }

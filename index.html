@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./profile-home.css" />
+    <link rel="stylesheet" href="./footer.css" />
     <link rel="stylesheet" href="./about.css" />
     <link rel="stylesheet" href="./experience-new.css" />
     <link rel="stylesheet" href="./education.css" />
     <link rel="stylesheet" href="./socialWork.css" />
     <link rel="stylesheet" href="./projects.css" />
-    <link rel="stylesheet" href="mediaqueries" />
+    <link rel="stylesheet" href="./contact.css" />
+    <!-- <link rel="stylesheet" href="mediaqueries.css" /> -->
+    <!-- Fixed this line -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
+
   <body>
     <nav id="desktop-nav" class="desktop-nav">
       <div>
@@ -204,13 +220,13 @@
       </div>
 
       <div class="duration-text-box container">
-        <p class="time">Nov 2023 - Present</p>
+        <p class="time time">Nov 2023 - Present</p>
         <p class="address">IITM Research Park, Chennai, India</p>
       </div>
 
       <div class="duration-text-box container left-side">
-        <p class="time">Jan 2023 - Nov 2023</p>
-        <p class="address">Bengaluru, India</p>
+        <p class="time time-right-align">Jan 2023 - Nov 2023</p>
+        <p class="address time-right-align">Bengaluru, India</p>
       </div>
 
       <div class="container right-container">
@@ -243,8 +259,8 @@
       </div>
 
       <div class="duration-text-box container">
-        <p class="time">Jan 2021 - Oct 2021</p>
-        <p class="address">New Delhi, India</p>
+        <p class="time time-right-align">Jan 2021 - Oct 2021</p>
+        <p class="address time-right-align">New Delhi, India</p>
       </div>
 
       <div class="container right-container">
@@ -282,9 +298,12 @@
     <section class="projects" id="projects">
       <h2 class="projects-heading">Projects</h2>
       <div class="projects-grid">
-        <a href="#">
+        <a href="./projects/ethercat.html">
           <div class="project">
-            <p class="project-more">More &rAarr;</p>
+            <img src=".//projects/p-1.png" alt="" />
+            <p class="project-desc">
+              EtherCAT based motor driver for BLDC FOC Control
+            </p>
           </div>
         </a>
 
@@ -670,6 +689,142 @@
       </div>
     </section>
 
+    <!-- Contact Me -->
+
+    <section id="contact" class="contact">
+      <div class="contact-section">
+        <div class="contact-section-left">
+          <h1>Let Us Talk</h1>
+          <p class="contact-section-left-text">
+            Meaningful connections begin with conversations. Reach out to me
+            through any of the links below, and let's collaborate or share
+            ideas.
+          </p>
+
+          <p>youremail@gmail.com</p>
+
+          <div class="contact-details">
+            <a href="#" target="_blank" class="contact-logo-link">
+              <div class="contact-detail">
+                <ion-icon name="logo-linkedin" class="contact-logo"></ion-icon>
+              </div>
+            </a>
+
+            <a href="#" target="_blank" class="contact-logo-link">
+              <div class="contact-detail">
+                <ion-icon name="logo-github" class="contact-logo"></ion-icon>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-section-right">
+          <form id="contact-form-container" class="contact-form">
+            <div>
+              <label for="name">Your Name</label>
+              <input
+                required
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                name="name"
+              />
+            </div>
+
+            <div>
+              <label for="email">Your Email-id</label>
+              <input
+                required
+                type="email"
+                id="email"
+                placeholder="Enter your e-mail id"
+                name="email"
+              />
+            </div>
+
+            <div>
+              <label for="message">Write your message here</label>
+              <textarea
+                required
+                id="message"
+                name="message"
+                rows="8"
+                placeholder="Enter your message..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit">Submit Now</button>
+          </form>
+        </div>
+
+        <!-- Response message to be shown after successful submission -->
+        <div id="response-message" class="response-message-hidden">
+          <p>Thank you for your message!</p>
+          <button id="submit-again-button">Submit Again</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <p>Made by Pranay Tummalapalli</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script>
+      // Initialize EmailJS with your public key
+      emailjs.init("Y8hq_MyOqe41zgBYs");
+
+      document
+        .getElementById("contact-form-container")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData);
+
+          // Send email using EmailJS
+          emailjs.send("service_m6owad8", "template_zvnfy8a", data).then(
+            function (response) {
+              console.log("Success!", response);
+
+              // Hide the form and show the response message
+              document.getElementById("contact-form-container").style.display =
+                "none"; // Hide form
+
+              // Remove the hidden class and add the show class to display the response message
+              document
+                .getElementById("response-message")
+                .classList.remove("response-message-hidden");
+              document
+                .getElementById("response-message")
+                .classList.add("response-message");
+            },
+            function (error) {
+              console.log("Failed...", error);
+              alert(
+                "There was an error submitting the form. Please try again."
+              );
+            }
+          );
+        });
+
+      // Handle "Submit Again" button click to reset the form
+      document
+        .getElementById("submit-again-button")
+        .addEventListener("click", function () {
+          // Reset form and show it again
+          document.getElementById("contact-form-container").reset();
+          document.getElementById("contact-form-container").style.display =
+            "block"; // Show form again
+          document
+            .getElementById("response-message")
+            .classList.remove("response-message");
+          document
+            .getElementById("response-message")
+            .classList.add("response-message-hidden"); // Hide response message
+        });
+    </script>
   </body>
 </html>

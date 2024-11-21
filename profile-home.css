@@ -1,7 +1,6 @@
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
   /* padding: 64px; */
   /* background-color: yellow; */
 }
@@ -11,7 +10,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 64px;
+  padding: 64px 0px;
 }
 
 /*TEXT ON HOME PAGE*/
@@ -136,6 +135,7 @@
   color: #727070;
   margin-top: 500px;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .arrow {

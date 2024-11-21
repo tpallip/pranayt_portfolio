@@ -21,7 +21,7 @@ nav {
   /* height: 5vh; Keep the height as is */
 
   padding-bottom: 30px; /* Adjust padding if necessary */
-  position: fixed; /* Make it fixed */
+  position: fixed;
 
   /* top: 0; /* Position it at the top */
   /* left: 0; /* Align to the left */
