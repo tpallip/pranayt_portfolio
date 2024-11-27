@@ -1,16 +1,17 @@
 .home {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.75fr 1fr;
   /* padding: 64px; */
   /* background-color: yellow; */
+  padding: 64px 0px 128px 0px;
 }
 
 .profile-home {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding: 64px 0px;
+  padding: 0px 0px;
 }
 
 /*TEXT ON HOME PAGE*/
@@ -29,7 +30,7 @@
 
 .hello {
   color: #424242;
-  font-size: 120px;
+  font-size: 160px;
   font-weight: 200;
   /* height: 450px; */
   /* margin-top: -350px; */
@@ -37,19 +38,19 @@
 
 .im {
   color: #727070;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 350;
 }
 
 .name-designator {
   color: #727070;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 400;
 }
 
 .first-name {
   color: #424242;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 400;
 }
 
@@ -79,10 +80,10 @@
   border-width: 4px; */
 
   border: 4px solid #999; /*use this instead of writing 3 lines*/
-  padding: 8px 16px;
-  /* height: 80px;
-  width: 250px; */
-  border-radius: 26px;
+  /* padding: 8px 16px; */
+  height: 80px;
+  width: 250px;
+  border-radius: 128px;
   cursor: pointer;
   /* margin-left: 10px; */
 }
@@ -98,11 +99,11 @@
 
   border: 4px solid #999;
 
-  /* height: 80px;
-  width: 250px; */
+  height: 80px;
+  width: 250px;
 
-  padding: 8px 16px;
-  border-radius: 24px;
+  /* padding: 8px 16px; */
+  border-radius: 128px;
   cursor: pointer;
   /* margin-left: 40px; */
 }
@@ -136,6 +137,8 @@
   margin-top: 500px;
   z-index: 1000;
   cursor: pointer;
+  left: 8px;
+  top: 500px;
 }
 
 .arrow {
@@ -159,6 +162,5 @@
   width: 100%;
   object-fit: contain;
   /* margin-top: 60px; */
-  padding: 32px;
   border-radius: 200px;
 }

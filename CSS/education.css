@@ -4,6 +4,14 @@
   margin: 0px 200px;
 }
 
+.education-heading {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 300;
+  color: #727070;
+  padding: 64px;
+}
+
 .education-details {
   display: grid;
   grid-template-columns: 1.5fr 3fr;
@@ -19,7 +27,7 @@
 }
 
 .education-details-left p {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 250;
 }
 
@@ -35,7 +43,7 @@
 
 .education-details-right p {
   line-height: 32px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: justify;
 }
 
@@ -71,22 +79,25 @@
 
 .dev-student-club {
   display: flex;
+  margin-top: 86px;
   padding: 64px 0px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 60px;
   margin-bottom: 100px;
 }
 
 .dsc-heading {
   color: #848282;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 30px;
 }
 
 .dev-student-club p {
   text-align: justify;
+  font-size: 18px;
+  width: 80%;
 }
 
 .dsc-img {

@@ -1,5 +1,5 @@
 .social-work {
-  padding: 60px 80px 40px 80px;
+  padding: 100px 80px 40px 80px;
   margin: 40px 100px;
   margin-bottom: 60px;
 }
@@ -20,7 +20,7 @@
 }
 
 .social-desc-heading {
-  font-size: 36px;
+  font-size: 44px;
   font-weight: 300;
   color: #424242;
 }
@@ -28,6 +28,7 @@
 .social-desc-text {
   color: #727070;
   text-align: justify;
+  font-size: 18px;
 }
 
 .social-grid {
@@ -54,7 +55,7 @@
 
 .social-grid-text-heading {
   color: #848282;
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 16px;
 }
 
@@ -62,6 +63,7 @@
   text-align: justify;
   color: #676565;
   line-height: 30px;
+  font-size: 18px;
 }
 
 .social-grid-text-project {

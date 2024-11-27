@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pranay Tummalapalli</title>
-    <link rel="stylesheet" href=".././style.css" />
-    <link rel="stylesheet" href=".././header.css" />
+    <link rel="stylesheet" href=".././CSS/style.css" />
+    <link rel="stylesheet" href=".././CSS/header.css" />
     <link rel="stylesheet" href="./project.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <nav id="desktop-nav" class="desktop-nav">
@@ -74,6 +82,9 @@
 
     <section class="project">
       <div class="project-grid">
+        <div class="project-grid-github">
+          <ion-icon name="logo-github" class="project-logo"></ion-icon>
+        </div>
         <div class="project-grid-left">
           <p class="project-grid-subheading">Meril Endosurgery, 2024</p>
           <h1 class="project-grid-heading">
@@ -104,7 +115,8 @@
         </div>
 
         <div class="project-grid-right">
-          <img src="./p-1.png" alt="" />
+          <img src="./ethercat.png" alt="" />
+          <img src="./ethercat2.png" alt="" />
         </div>
       </div>
 
@@ -114,6 +126,53 @@
         <span>Control Systems</span>
         <span>STM32CubeIDE</span>
         <span>Beckhoff TwinCAT XAE</span>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-grid-github">
+          <a
+            href="https://github.com/pranaytummalapalli/Multislave-EWA/tree/master/examples/ew_actuator"
+          >
+            <ion-icon name="logo-github" class="project-logo"></ion-icon>
+          </a>
+        </div>
+        <div class="project-grid-left">
+          <h1 class="project-grid-heading">
+            BLDC Motor Control using IgH EtherCAT Master
+          </h1>
+          <p class="project-grid-tab">Emb. Software</p>
+          <p class="project-grid-tab">Controls</p>
+        </div>
+
+        <div class="project-grid-middle">
+          <p>
+            Controlling a BLDC motor using the IgH EtherCAT master toolchain
+            from EtherLab. Implementation of cyclic process data input and
+            output from the repository, sepoint access through shared memory and
+            other IPC methods like pipes and UDP sockets, to set target values
+            while optimising real-time performance for etherCAT communication.
+            <br />
+            <br />
+            <span class="text-subheading">Platform</span>
+            <br />
+            IgH Etherlabs EtherCAT master Ingenia Denali XCR-E Motor drive
+            Faulhaber motor
+            <br />
+            <br />
+            PID Control for Position, Velocity and Torque
+            <br />
+            <br />
+            PC to send setpoints: shared memory, UDP sockets, pipes
+          </p>
+        </div>
+      </div>
+
+      <div class="skills-container">
+        <span>C</span>
+        <span>Motor Control</span>
+        <span>Control Systems</span>
+        <span>Kernel Programming</span>
+        <span>Socket programming</span>
         <span>IgH Etherlabs EtherCAT Master</span>
         <span>Octave</span>
       </div>

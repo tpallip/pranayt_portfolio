@@ -1,5 +1,5 @@
 .projects {
-  padding: 60px 80px 40px 80px;
+  padding: 150px 80px 40px 80px;
   margin: auto;
   margin-bottom: 60px;
 }
@@ -13,10 +13,10 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 50px 120px;
-  column-gap: 120px;
-  row-gap: 60px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 50px;
+  /* column-gap: 120px; */
+  gap: 30px;
 }
 
 .project {
@@ -41,7 +41,9 @@
 }
 
 .project img {
-  width: 50%;
+  /* width: 50%; */
+  width: 300px;
+  height: 300px;
   border-radius: 64px;
   display: block;
   transition: transform 0.3s; /* Smooth image zoom */
@@ -99,7 +101,7 @@
 
 /* Awards Section */
 .awards {
-  margin-top: 32px;
+  margin-top: 120px;
 }
 
 .awards-heading {
@@ -144,7 +146,7 @@
 }
 
 .award-desc {
-  font-size: 20px;
+  font-size: 22px;
   color: #727070;
   font-weight: 300;
 }

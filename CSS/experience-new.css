@@ -1,4 +1,4 @@
-.experience {
+.experience-grid {
   position: relative;
   max-width: 1200px;
   margin-top: 250px;
@@ -89,7 +89,7 @@ a {
   padding: 20px 30px;
   background-color: #f8f8f8;
   position: relative;
-  border-radius: 6px;
+  border-radius: 32px;
   font-size: 16px;
   transition: all 0.3s;
   /* border: 2px solid #bebebe; */
@@ -97,11 +97,6 @@ a {
 
 .text-box:hover {
   background-color: #e1e1e1;
-}
-
-.text-box small {
-  font-size: 14px;
-  font-weight: 400;
 }
 
 .duration-text-box {
@@ -121,7 +116,7 @@ a {
   font-weight: 500;
 }
 
-.experience::after {
+.experience-grid::after {
   content: "";
   position: absolute;
   width: 6px;
@@ -144,27 +139,31 @@ a {
 }
 
 .text-box h2 {
-  font-weight: 600;
+  font-weight: 300;
+  font-size: 24px;
 }
 
 .text-box small {
   display: inline-block;
   margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 300;
+  font-weight: 400;
 }
 
-.experience::before {
+.experience-grid::before {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #424242; /* Inverts the triangle */
+  border-bottom: 17.32px solid #424242; /* Makes the triangle equilateral */
   bottom: -8px; /* Adjusts the position */
   left: 50%;
   margin-left: -10px; /* Centers the triangle */
   opacity: 0; /* Initially hides the triangle */
-  animation: triangleFadeIn 8s linear forwards;
+  animation: triangleFadeIn 6s linear forwards;
 }
 
 @keyframes triangleFadeIn {

@@ -1,5 +1,5 @@
 .about {
-  padding: 64px 80px 0px 80px;
+  padding: 240px 80px 160px 80px;
 }
 
 .about-page {
@@ -54,7 +54,7 @@
 
 .about-content {
   color: #727070;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 350;
   /* margin-top: 60px; */
 }

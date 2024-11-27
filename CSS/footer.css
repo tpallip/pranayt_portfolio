@@ -1,5 +1,7 @@
 .footer {
   background-color: #0a0a0a;
+  height: 5vh;
+  width: 100%;
 }
 
 .footer p {

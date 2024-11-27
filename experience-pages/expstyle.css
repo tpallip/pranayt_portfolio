@@ -7,7 +7,7 @@
 .experience-page {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  padding: 100px 32px;
+  padding: 100px 128px;
   gap: 48px;
 }
 
@@ -42,8 +42,9 @@
 
 .text {
   text-align: justify;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
+  line-height: 32px;
 }
 
 .sub-heading {
@@ -61,8 +62,8 @@
 }
 
 .right-container p {
-  padding: 16px 32px 8px 32px;
-  font-size: 16px;
+  padding: 16px 0px 8px 32px;
+  font-size: 14px;
 }
 
 .arrow {
