@@ -4,22 +4,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const formSubmitted = document.getElementById("form-submitted");
   const submitAgainButton = document.getElementById("submit-again-button");
 
-  // Initialize EmailJS (Replace "YOUR_USER_ID" with your actual EmailJS user ID)
-  emailjs.init("Y8hq_MyOqe41zgBYs");
+  // Initialize EmailJS
+  emailjs.init(process.env.EMAILJS_USER_ID);
 
   contactForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submission
 
     const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+    const data = Object.fromEntries(formData); // Convert form data to an object
 
     try {
       const result = await emailjs.send(
-        "service_m6owad8",
-        "template_zvnfy8a",
+        process.env.EMAILJS_SERVICE_ID, // Service ID from environment variables
+        process.env.EMAILJS_TEMPLATE_ID, // Template ID from environment variables
         data
       );
+
       if (result.status === 200) {
+        // Show success message
         formContainer.style.display = "none";
         formSubmitted.style.display = "block";
       } else {
@@ -27,10 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
     }
   });
 
   submitAgainButton.addEventListener("click", () => {
+    // Reset form for another submission
     formContainer.style.display = "block";
     formSubmitted.style.display = "none";
   });
