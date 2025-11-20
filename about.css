@@ -35,6 +35,7 @@
   /*  justify-content: flex-start; /* Center items vertically (if needed) */
   text-align: justify; /* Align text to the right */
   padding: 0px 32px 0px 0px;
+  margin-right: 120px;
   /* margin-left: 700px; */
   /* margin-top: 200px; */
 }
