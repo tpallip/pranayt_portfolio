@@ -800,62 +800,9 @@
 
     <!-- Footer -->
 
-    <!-- <footer class="footer"></footer>
+    <footer class="footer"></footer>
 
     <script src="script.js"></script>
-    <script>
-      // Initialize EmailJS with your public key
-      emailjs.init("Y8hq_MyOqe41zgBYs");
 
-      document
-        .getElementById("contact-form-container")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent form submission
-
-          const formData = new FormData(this);
-          const data = Object.fromEntries(formData);
-
-          // Send email using EmailJS
-          emailjs.send("service_m6owad8", "template_zvnfy8a", data).then(
-            function (response) {
-              console.log("Success!", response);
-
-              // Hide the form and show the response message
-              document.getElementById("contact-form-container").style.display =
-                "none"; // Hide form
-
-              // Remove the hidden class and add the show class to display the response message
-              document
-                .getElementById("response-message")
-                .classList.remove("response-message-hidden");
-              document
-                .getElementById("response-message")
-                .classList.add("response-message");
-            },
-            function (error) {
-              console.log("Failed...", error);
-              alert(
-                "There was an error submitting the form. Please try again."
-              );
-            }
-          );
-        });
-
-      // Handle "Submit Again" button click to reset the form
-      document
-        .getElementById("submit-again-button")
-        .addEventListener("click", function () {
-          // Reset form and show it again
-          document.getElementById("contact-form-container").reset();
-          document.getElementById("contact-form-container").style.display =
-            "block"; // Show form again
-          document
-            .getElementById("response-message")
-            .classList.remove("response-message");
-          document
-            .getElementById("response-message")
-            .classList.add("response-message-hidden"); // Hide response message
-        });
-    </script>-->
   </body>
 </html>
