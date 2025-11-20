@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Software Engineer</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./expstyle.css" />
+    <link rel="stylesheet" href="../header.css" />
+  </head>
+  <body>
+    <nav class="desktop-nav">
+      <div>
+        <ul class="nav-links">
+          <li>
+            <a href="../#home" class="nav-links" onclick="toggleMenu()"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="../#about" class="nav-links" onclick="toggleMenu()"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="../#experience" class="nav-links" onclick="toggleMenu()"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="../#projects" class="nav-links" onclick="toggleMenu()"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="../#education" class="nav-links" onclick="toggleMenu()"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="../social" class="nav-links" onclick="toggleMenu()"
+              >Social Work & Co-Curricular</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="experience-page">
+      <div class="left-container">
+        <p class="designation">Sr. Embedded Software Engineer</p>
+        <h2 class="company">Minus Zero, Autonomous Vehicles</h2>
+        <p class="location">Bengaluru, India</p>
+      </div>
+      <div class="middle-container">
+        <p class="text">
+          At Minus Zero, I work on the core vehicle control stack for 
+          autonomous driving systems, contributing to both the software 
+          architecture and the hardware-in-the-loop vehicle interface systems.
+          <br />
+          <br />
+          I am responsible for the design and development of the vehicle 
+          control module that runs on the NVIDIA Jetson AGX Orin 
+          platform—forming a critical part of the onboard autonomous 
+          driving software stack. This module has been deployed and tested 
+          extensively on public roads using a Tata Nexon platform.
+          <br />
+          <br />
+          My work involves developing robust CAN and UDP socket 
+          interfaces to bridge the onboard software stack with the 
+          Tata Nexon’s drive-by-wire signals and feedbacks. The vehicle 
+          module architecture is inspired by Baidu Apollo’s modular AD system, 
+          focusing on clarity, scalability, and distributed computing.
+          <br />
+          <br />
+          I designed and tuned motion control algorithms, including 
+          pure-pursuit for lateral control and PID-based longitudinal 
+          control, ensuring stable and predictable vehicle behavior 
+          across varying speeds and road conditions. This hands-on 
+          development gave me a strong understanding of motion planning 
+          pipelines and autonomous vehicle system design, especially in 
+          real-world deployment.
+          <br />
+          <br />
+          The middleware architecture I work with is built around the eCAL 
+          framework, leveraging publisher-subscriber messaging and 
+          protobuf-based message schemas. This contributes to a highly 
+          modular and debuggable software system, complete with scalable 
+          logging and replay tools.
+          <br />
+          <br />
+          Beyond vehicle control software, I also lead the design and development 
+          of Minus Zero’s in-house STM32G4-based drive-by-wire system for the 
+          Tata Nexon—since the stock vehicle has no native ADAS-compatible 
+          interfaces. This includes:
+          <br />
+          <br />
+          <ul>
+            <li>Designed vehicle control module on Jetson Orin AGX</li>
+            <li>Developed CAN/UDP interfaces for Nexon drive-by-wire system</li>
+            <li>Implemented pure-pursuit and PID control algorithms</li>
+            <li>Built STM32G4-based custom drive-by-wire system</li>
+          </ul>
+          <br />
+          <br />
+          In addition to engineering contributions, I also led key technical 
+          collaborations with industry partners and OEMs. This included:
+          <ul>
+            <li>Mercedes-Benz Research & Development India, collaborating 
+                on L3 ADAS development for Indian road environments on the S-Class</li>
+            <li>Ashok Leyland, supporting autonomous transport solutions for port logistics</li>
+            <li>ARAI, partnering for validation and integration of the Tata 
+                Nexon drive-by-wire system</li>
+          </ul>
+          <br />
+          <br />
+          These collaborations provided not only technical exposure but also deep insights 
+          into safety requirements, industry standards, and the broader ecosystem of 
+          autonomous mobility technologies.
+        </p>
+
+        <div class="media-gallery">
+
+            <!-- Video -->
+            <div class="media-video-mz">
+                <iframe
+                    src="https://www.youtube.com/embed/TYFjhghqwk4"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+
+            <div class="media-video-mz">
+                <iframe
+                    src="https://www.youtube.com/embed/y_uoBgNRcUE"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+
+            <!-- <div class="media-video-mz">
+                <iframe 
+                    src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7396117694569193472?compact=1" 
+                    height="399" 
+                    width="504" 
+                    frameborder="0" 
+                    allowfullscreen="" 
+                    title="Embedded post"
+                ></iframe>
+            </div> -->
+
+        </div>
+      </div>
+      <div class="right-container">
+        <img src="../assets/expPage/mz-profile.jpg" />
+
+      </div>
+    </section>
+  </body>
+</html>
