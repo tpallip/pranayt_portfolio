@@ -48,7 +48,7 @@
   justify-content: center;
   width: 100%;
   gap: 32px;
-}
+} 
 
 .project-grid-right img {
   width: 100%;
@@ -94,3 +94,28 @@
   height: 80%;
   border-radius: 16px;
 }
+
+.github-link {
+  margin-top: 16px;          /* space below the tabs */
+}
+
+.github-link a {
+  display: flex;
+  align-items: center;
+  gap: 8px;                  /* spacing between icon + text */
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.github-link img {
+  width: 40px;               /* small GitHub icon size */
+  height: 40px;
+  opacity: 0.9;
+}
+
+.github-link a:hover img {
+  opacity: 0.6;
+}
+
