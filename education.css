@@ -2,7 +2,15 @@
   padding-bottom: 100px;
   padding: 80px 40px 40px 40px;
   margin: 0px 200px;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50px;
+}
+
+.education-heading {
+  text-align: center;
+  color: #727070;
+  font-weight: 300;
+  font-size: 38px;
+  margin-bottom: 50px;
 }
 
 .education-details {
@@ -77,6 +85,7 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
+  margin-top: 50px;
   margin-bottom: 100px;
 }
 
@@ -93,6 +102,8 @@
 .dsc-img {
   width: 80%;
   border-radius: 64px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .dsc-videos {
@@ -100,8 +111,12 @@
   align-items: center;
   justify-content: center;
   gap: 64px;
+  margin-top: 80px;
+  flex-wrap: wrap;  /* allows videos to wrap on smaller screens */
 }
 
-.dsc-videos img {
-  width: 30%;
+.dsc-videos iframe {
+  width: 600px;          /* perfect desk width */
+  aspect-ratio: 16 / 9;  /* keeps YouTube proportion */
+  border-radius: 12px;
 }
