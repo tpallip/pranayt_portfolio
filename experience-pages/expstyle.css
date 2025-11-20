@@ -75,3 +75,35 @@
   border-radius: 64px;
   padding: 0px 32px;
 }
+
+.media-gallery {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.media-images {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.media-images img {
+  width: 45%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.media-video {
+  display: flex;
+  justify-content: center;
+}
+
+.media-video iframe {
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+  border-radius: 12px;
+}
+

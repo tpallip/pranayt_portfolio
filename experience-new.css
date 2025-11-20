@@ -1,20 +1,58 @@
-/* Disable animations until JS adds the .animate class */
-.experience:not(.animate) .container {
-  animation: none !important;
-  opacity: 0 !important;
+/* experience-new.css — updated and cleaned
+   - hides containers until JS adds .animate and .play
+   - movedown animates opacity and translate (fade+slide)
+   - removes brittle nth-child timing from CSS (stagger via JS)
+   - vertical line & triangle controlled by .experience.animate
+*/
+
+/* ---------- initial hidden state (no animations) ---------- */
+#experience .container {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  will-change: transform, opacity;
+  /* no animation here; JS will add .play to trigger it */
 }
 
-.experience:not(.animate)::after {
-  animation: none !important;
-  height: 0 !important;
+/* ---------- keyframes ---------- */
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.experience:not(.animate)::before {
-  animation: none !important;
-  opacity: 0 !important;
+@keyframes moveline {
+  0% { height: 0; }
+  100% { height: 100%; }
 }
 
+@keyframes triangleFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
+/* ---------- classes that enable animations (added by JS) ---------- */
+#experience.animate::after {
+  height: 100%;               /* final visual height */
+  transition: height 1.2s linear;
+}
+
+#experience.animate::before {
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+#experience .container.play {
+  visibility: visible;
+  animation: movedown 600ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+/* ---------- layout & core styles (kept & cleaned) ---------- */
 .experience {
   position: relative;
   max-width: 1200px;
@@ -34,61 +72,14 @@
   padding: 0px 50px;
   position: relative;
   width: 100%;
-  animation: movedown 1s linear forwards;
-  opacity: 0;
+  /* animation removed — JS toggles .play */
 }
 
-@keyframes movedown {
-  0% {
-    opacity: 1;
-    transform: translateY(-30px);
-  }
+/* remove nth-child animation-delay rules; JS handles staggering */
 
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-.container:nth-child(1) {
-  animation-delay: 0s;
-}
-.container:nth-child(2) {
-  animation-delay: 0s;
-}
-.container:nth-child(3) {
-  animation-delay: 1s;
-}
-.container:nth-child(4) {
-  animation-delay: 1s;
-}
-.container:nth-child(5) {
-  animation-delay: 2s;
-}
-.container:nth-child(6) {
-  animation-delay: 2s;
-}
-.container:nth-child(7) {
-  animation-delay: 3s;
-}
-.container:nth-child(8) {
-  animation-delay: 3s;
-}
-.container:nth-child(9) {
-  animation-delay: 4s;
-}
-.container:nth-child(10) {
-  animation-delay: 4s;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #000;
-}
-
-a {
-  color: #000;
-}
+/* links */
+a:hover { text-decoration: none; color: #000; }
+a { color: #000; }
 
 .container img {
   position: absolute;
@@ -98,9 +89,7 @@ a {
   z-index: 10;
 }
 
-.right-container img {
-  left: -10px;
-}
+.right-container img { left: -10px; right: auto; }
 
 .text-box {
   padding: 20px 30px;
@@ -108,91 +97,57 @@ a {
   position: relative;
   border-radius: 6px;
   font-size: 16px;
-  transition: all 0.3s;
-  /* border: 2px solid #bebebe; */
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.text-box:hover {
-  background-color: #e1e1e1;
-}
+.text-box:hover { background-color: #e1e1e1; }
 
-.text-box small {
-  font-size: 14px;
-  font-weight: 400;
-}
+.text-box small { font-size: 14px; font-weight: 400; display: inline-block; margin-bottom: 15px; }
 
-.duration-text-box {
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  flex-direction: column;
-}
+.duration-text-box { display: flex; justify-content: center; flex-direction: column; }
+.time { font-size: 24px; font-weight: 600; }
+.address { font-size: 16px; font-weight: 500; }
 
-.time {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.address {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.experience::after {
+/* vertical line & triangle: default hidden; enabled by .animate */
+#experience::after {
   content: "";
   position: absolute;
   width: 6px;
-  height: 90%;
+  height: 0; /* start collapsed */
   background-color: #424242;
   top: 0;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  animation: moveline 6s linear forwards;
 }
 
-@keyframes moveline {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-.text-box h2 {
-  font-weight: 600;
-}
-
-.text-box small {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.experience::before {
+#experience::before {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #424242; /* Inverts the triangle */
-  bottom: -8px; /* Adjusts the position */
+  border-bottom: 10px solid #424242;
+  bottom: -8px;
   left: 50%;
-  margin-left: -10px; /* Centers the triangle */
-  opacity: 0; /* Initially hides the triangle */
-  animation: triangleFadeIn 8s linear forwards;
+  margin-left: -10px;
+  opacity: 0;
 }
 
-@keyframes triangleFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.text-box h2 { font-weight: 600; }
+.time-right-align { text-align: right; }
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #experience .container.play { animation: none !important; opacity: 1 !important; transform: none !important; visibility: visible !important; }
+  #experience.animate::after { transition: none; height: 90%; }
+  #experience.animate::before { transition: none; opacity: 1; }
 }
 
-.time-right-align {
-  text-align: right;
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .experience { grid-template-columns: 1fr; padding: 60px 24px; }
+  .container { padding: 0 16px; }
+  #experience::after { left: 16px; }
 }
