@@ -1,0 +1,83 @@
+.social-work {
+  padding: 60px 80px 40px 80px;
+  margin: 40px 100px;
+  margin-bottom: 60px;
+}
+
+.social-heading {
+  text-align: center;
+  font-weight: 300;
+  font-size: 38px;
+  color: #727070;
+}
+
+.social-desc-flex {
+  display: flex;
+  padding: 40px 80px;
+
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.social-desc-heading {
+  font-size: 36px;
+  font-weight: 300;
+  color: #424242;
+}
+
+.social-desc-text {
+  color: #727070;
+  text-align: justify;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 0px;
+  align-self: center;
+  justify-self: center;
+  column-gap: 64px;
+  row-gap: 128px;
+  margin-top: 50px;
+}
+
+.social-grid-img {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.social-grid-img img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.social-grid-text-heading {
+  color: #848282;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.social-grid-text-text {
+  text-align: justify;
+  color: #676565;
+  line-height: 30px;
+}
+
+.social-grid-text-project {
+  color: #424242;
+  margin-top: 32px;
+  font-size: 20px;
+}
+
+.nature-photo {
+  width: 70% !important;
+}
+
+.tabla-photo {
+  width: 70% !important;
+}
+
+.badminton-photo {
+  width: 70% !important;
+}

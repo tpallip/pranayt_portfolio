@@ -1,0 +1,122 @@
+.education {
+  padding-bottom: 100px;
+  padding: 80px 40px 40px 40px;
+  margin: 0px 200px;
+  scroll-margin-top: 50px;
+}
+
+.education-heading {
+  text-align: center;
+  color: #727070;
+  font-weight: 300;
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+
+.education-details {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  gap: 80px;
+
+  align-items: start;
+}
+
+.education-details-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-details-left p {
+  font-size: 28px;
+  font-weight: 250;
+}
+
+.education-details-left p:last-child {
+  font-size: 20px;
+}
+
+.education-details-left h1 {
+  font-family: Poppins;
+  font-size: 44px;
+  font-weight: 300;
+}
+
+.education-details-right p {
+  line-height: 32px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.education-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  margin-top: 100px;
+}
+
+.education-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 64px 0px 64px;
+  margin-bottom: 100px;
+}
+
+.education-desc-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-desc-img img {
+  width: 100%;
+  border-radius: 26px;
+}
+
+.education-details-left-below p {
+  font-size: 30px;
+  font-weight: 250;
+}
+
+.dev-student-club {
+  display: flex;
+  padding: 64px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.dsc-heading {
+  color: #848282;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.dev-student-club p {
+  text-align: justify;
+}
+
+.dsc-img {
+  width: 80%;
+  border-radius: 64px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.dsc-videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 80px;
+  flex-wrap: wrap;  /* allows videos to wrap on smaller screens */
+}
+
+.dsc-videos iframe {
+  width: 600px;          /* perfect desk width */
+  aspect-ratio: 16 / 9;  /* keeps YouTube proportion */
+  border-radius: 12px;
+}

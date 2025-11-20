@@ -1,60 +1,69 @@
-.about-page{
-    display: flex;
-    flex-direction: row;
-    margin-top: 500px;
+.about {
+  padding: 64px 80px 0px 80px;
+  margin-top: 200px;
+  scroll-margin-top: 150px;
+}
+
+.about-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  /* justify-content: center; */
+  /* margin-top: 500px; */
 }
 
 /*ABOUT PIC*/
-.about-profile-picture{
-    display: flex;
-    width: 500px;
-    margin-left: 200px;
-    margin-top: 200px;
+.about-profile-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  /* margin-left: 200px;
+  margin-top: 200px; */
 }
 
-.about-pic{
-    width: 1300px;
-    object-fit: contain;
-    border-radius: 650px;
+.about-pic {
+  width: 60%;
+  /* object-fit: contain; */
+  border-radius: 50%;
 }
 
 /*ABOUT CONTENT*/
-.about-text{
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Center items vertically (if needed) */
-    align-items: right; /* Align items to the right (end) */
-    height: 200px; /* Set a height for vertical centering */
-    margin: 0; /* Center the container itself */
-    text-align: justify; /* Align text to the right */
-    width: 800px;
-    margin-left: 700px;
-    margin-top: 200px;
+.about-text {
+  /*  display: flex; /* Enable Flexbox */
+  /*  flex-direction: column; /* Stack items vertically */
+  /*  justify-content: flex-start; /* Center items vertically (if needed) */
+  text-align: justify; /* Align text to the right */
+  padding: 0px 32px 0px 0px;
+  /* margin-left: 700px; */
+  /* margin-top: 200px; */
 }
 
-.about-me{
-    color: #727070;
-    font-size: 80px;
-    font-weight: 400;
+.about-me {
+  color: #727070;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
-.hey-there{
-    color: #727070;
-    font-size: 60px;
-    font-weight: 380;
-    margin-top: 80px;
+.hey-there {
+  color: #727070;
+  font-size: 30px;
+  font-weight: 380;
+  margin-bottom: 20px;
+  /* margin-top: 80px; */
 }
 
-.about-content{
-    color: #727070;
-    font-size: 30px;
-    font-weight: 350;
-    margin-top: 60px;
+.about-content {
+  color: #727070;
+  font-size: 18px;
+  font-weight: 350;
+  /* margin-top: 60px; */
 }
 
-.name{
-    color: #727070;
-    font-size: 40px;
-    font-weight: 350;
-    margin-top: 60px;
+.name {
+  color: #727070;
+  font-size: 24px;
+  font-weight: 350;
+  /* margin-top: 60px; */
 }
