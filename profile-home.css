@@ -8,7 +8,7 @@
 .profile-home {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   padding: 64px 0px;
 }
@@ -69,7 +69,7 @@
 }
 
 .resume-btn {
-  font-size: 32px;
+  font-size: 28px;
   /* margin-top: 40px; */
   background-color: white;
   color: #999999;
@@ -78,7 +78,7 @@
   border-style: solid;
   border-width: 4px; */
 
-  border: 4px solid #999; /*use this instead of writing 3 lines*/
+  border: 3px solid #999; /*use this instead of writing 3 lines*/
   padding: 8px 16px;
   /* height: 80px;
   width: 250px; */
@@ -88,7 +88,7 @@
 }
 
 .contact-btn {
-  font-size: 32px;
+  font-size: 28px;
   /* margin-top: 40px; */
   background-color: #999999;
   color: white;
@@ -133,7 +133,7 @@
   font-size: 20px;
   font-weight: 500;
   color: #727070;
-  margin-top: 500px;
+  margin-top: 600px;
   z-index: 1000;
   cursor: pointer;
 }

@@ -57,3 +57,23 @@ window.addEventListener("scroll", function () {
     scrollArrow.querySelector(".arrow").textContent = "↑";
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const expSection = document.querySelector("#experience");
+
+  if (!expSection) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        expSection.classList.add("animate"); // Enable animations
+        obs.unobserve(expSection); // Run only once!
+      }
+    });
+  }, {
+    threshold: 0.25, // Start animation when 25% of the section is visible
+  });
+
+  observer.observe(expSection);
+});
+

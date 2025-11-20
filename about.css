@@ -1,5 +1,7 @@
 .about {
   padding: 64px 80px 0px 80px;
+  margin-top: 200px;
+  scroll-margin-top: 150px;
 }
 
 .about-page {

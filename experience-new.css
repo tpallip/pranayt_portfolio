@@ -1,3 +1,20 @@
+/* Disable animations until JS adds the .animate class */
+.experience:not(.animate) .container {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+.experience:not(.animate)::after {
+  animation: none !important;
+  height: 0 !important;
+}
+
+.experience:not(.animate)::before {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+
 .experience {
   position: relative;
   max-width: 1200px;
