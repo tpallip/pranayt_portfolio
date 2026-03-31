@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="./socialWork.css" />
     <link rel="stylesheet" href="./projects.css" />
     <link rel="stylesheet" href="./contact.css" />
-    <!-- <link rel="stylesheet" href="mediaqueries.css" /> -->
-    <!-- Fixed this line -->
+    <link rel="stylesheet" href="mediaqueries.css" />
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -35,38 +34,33 @@
       <div>
         <ul class="nav-links">
           <li>
-            <a href="#home" class="nav-links" onclick="toggleMenu()">Home</a>
+            <a href="#home" onclick="toggleMenu()">Home</a>
           </li>
           <li>
-            <a href="#about" class="nav-links" onclick="toggleMenu()">About</a>
+            <a href="#about" onclick="toggleMenu()">About</a>
           </li>
           <li>
-            <a href="#experience" class="nav-links" onclick="toggleMenu()"
-              >Experience</a
-            >
+            <a href="#experience" onclick="toggleMenu()">Experience</a>
           </li>
           <li>
-            <a href="#projects" class="nav-links" onclick="toggleMenu()"
-              >Projects</a
-            >
+            <a href="#projects" onclick="toggleMenu()">Projects</a>
           </li>
           <li>
-            <a href="#education" class="nav-links" onclick="toggleMenu()"
-              >Education</a
-            >
+            <a href="#education" onclick="toggleMenu()">Education</a>
           </li>
           <li>
-            <a href="#social" class="nav-links" onclick="toggleMenu()"
-              >Social Work & Co-Curricular</a
-            >
+            <a href="#social" onclick="toggleMenu()">Social Work & Co-Curricular</a>
           </li>
           <li>
-            <a href="#contact" class="nav-links" onclick="toggleMenu()"
-              >Contact</a
-            >
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
           </li>
         </ul>
       </div>
+      <button class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
 
     <!--Profile Landing Page-->
@@ -91,7 +85,7 @@
               Contact
             </button>
           </div>
-          <div class="scroll-arrow">
+          <div class="scroll-arrow" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
             Scroll <span class="arrow">&darr;</span>
           </div>
         </div>
@@ -652,7 +646,7 @@
             shaped my engineering mindset toward developing practical, 
             user-centric solutions.
           </p>
-          <a href="">
+          <a href="./experience-pages/CoFounderMechEngg.html">
             <p class="social-grid-text-project">Akshar Bionics &rightarrow;</p>
           </a>
         </div>
@@ -684,7 +678,7 @@
             that was not only technically sound but also practical, intuitive, and 
             genuinely impactful for the community it aimed to serve.
           </p>
-          <a href="">
+          <a href="./projects/raah.html">
             <p class="social-grid-text-project">Project Raah &rightarrow;</p>
           </a>
         </div>
@@ -785,11 +779,17 @@
         <div class="social-grid-text">
           <p class="social-grid-text-heading">Badminton</p>
           <p class="social-grid-text-text">
-            In 2018, as part of the National Service Scheme, I actively
-            contributed to the Swachh Bharat Mission, supporting efforts to
-            promote cleanliness and hygiene in local communities. This
-            experience allowed me to be part of a national initiative and make a
-            meaningful impact through hands-on service.
+            I have been playing badminton since the age of nine and it has
+            remained one of my most consistent passions throughout school and
+            college. I represented G.D. Goenka, Dwarka at the inter-zonal
+            level and competed in the CBSE North Zone Tournament, which gave
+            me early exposure to competitive sport.
+            <br />
+            <br />
+            Beyond competition, badminton keeps me physically active and
+            mentally sharp. The game's demands for quick reflexes, strategic
+            positioning, and endurance mirror many of the problem-solving
+            skills I apply in engineering — making it more than just a hobby.
           </p>
         </div>
 
@@ -875,13 +875,8 @@
           </form>
         </div> -->
 
-        <!-- Response message to be shown after successful submission -->
-        <!-- <div id="response-message" class="response-message-hidden">
-          <p>Thank you for your message!</p>
-          <button id="submit-again-button">Submit Again</button>
-        </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- Footer -->
 

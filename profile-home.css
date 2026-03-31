@@ -1,8 +1,8 @@
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* padding: 64px; */
-  /* background-color: yellow; */
+  min-height: 100vh;
+  padding-top: 80px; /* offset for fixed nav */
 }
 
 .profile-home {
@@ -129,23 +129,31 @@
 
 /*SCROLL*/
 .scroll-arrow {
-  position: fixed;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  color: #727070;
-  margin-top: 600px;
-  z-index: 1000;
+  color: #999999;
+  margin-top: 40px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.scroll-arrow:hover {
+  color: #424242;
 }
 
 .arrow {
-  position: fixed;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  color: #727070;
-  /* margin-top: -10px; */
-  margin-left: 5px;
-  z-index: 1000;
+  color: inherit;
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
 }
 /*PROFILE PIC*/
 .pic-container {
