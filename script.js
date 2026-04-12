@@ -1,58 +1,41 @@
 // Mobile nav toggle
-function toggleMenu() {
-  const ul = document.querySelector('#desktop-nav ul.nav-links');
-  const btn = document.querySelector('.hamburger-btn');
-  if (ul) ul.classList.toggle('mobile-open');
-  if (btn) btn.classList.toggle('open');
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('open');
+  document.querySelector('.nav-toggle').classList.toggle('open');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  // -------- nav highlight --------
-  const nav = document.querySelector('#desktop-nav');
-  const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-  if (nav && navLinks.length && sections.length) {
-    const navIO = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (!e.target.id) return;
-        const link = navLinks.find(l => l.getAttribute('href') === `#${e.target.id}`);
-        if (!link) return;
-        if (e.isIntersecting) {
-          navLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        }
-      });
-    }, { root: null, rootMargin: `-${nav.offsetHeight}px 0px 0px 0px`, threshold: 0.25 });
-    sections.forEach(s => navIO.observe(s));
-  }
-
-  // -------- timeline animation (ONE-TIME) --------
-  const exp = document.querySelector('#experience');
-  if (!exp) return;
-
-  const containers = Array.from(exp.querySelectorAll('.container'));
-
-  function revealTimeline() {
-    if (!exp.classList.contains('animate')) exp.classList.add('animate');
-    containers.forEach((el, i) => {
-      setTimeout(() => {
-        el.classList.add('play');
-        el.style.visibility = '';
-        el.style.opacity = '';
-      }, i * 120);
-    });
-  }
-
-  const io = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        revealTimeline();
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  io.observe(exp);
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('open');
+    document.querySelector('.nav-toggle').classList.remove('open');
+  });
 });
 
+// Scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
 
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Active nav link on scroll
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-52px 0px -60% 0px', threshold: 0 });
+
+sections.forEach(section => navObserver.observe(section));
