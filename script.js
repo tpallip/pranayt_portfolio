@@ -23,8 +23,8 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  root: pages,
-  threshold: 0.4
+  root: null,
+  threshold: 0.3
 });
 
 sections.forEach(s => observer.observe(s));

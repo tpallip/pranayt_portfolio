@@ -35,8 +35,6 @@ body {
   color: var(--text);
   line-height: 1.6;
   font-size: 16px;
-  overflow: hidden;
-  height: 100vh;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -118,11 +116,12 @@ img { max-width: 100%; display: block; }
 
 /* --- Fullscreen Page System --- */
 .pages {
-  height: 100vh;
-  overflow-y: auto;
-  scroll-behavior: smooth;
   position: relative;
   z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .page {
@@ -137,13 +136,6 @@ img { max-width: 100%; display: block; }
 .page-content {
   max-width: var(--max-width);
   width: 100%;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  scrollbar-width: none;
-}
-
-.page-content::-webkit-scrollbar {
-  display: none;
 }
 
 /* --- Dot Navigation --- */
@@ -219,11 +211,7 @@ img { max-width: 100%; display: block; }
 .page-hero {
   padding-left: 80px;
   padding-right: 32px;
-  flex-direction: column;
-  overflow-y: auto;
-  scrollbar-width: none;
 }
-.page-hero::-webkit-scrollbar { display: none; }
 
 .hero-inner {
   display: flex;
