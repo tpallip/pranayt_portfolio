@@ -56,21 +56,18 @@ img { max-width: 100%; display: block; }
 .pages {
   height: 100vh;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   position: relative;
   z-index: 1;
 }
 
 .page {
-  height: 100vh;
-  scroll-snap-align: start;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 60px 32px 60px 80px;
   position: relative;
-  overflow: hidden;
 }
 
 .page-content {
