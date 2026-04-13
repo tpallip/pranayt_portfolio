@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, {
   root: pages,
-  threshold: 0.5
+  threshold: 0.4
 });
 
 sections.forEach(s => observer.observe(s));
