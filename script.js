@@ -12,30 +12,30 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Scroll reveal
-const revealObserver = new IntersectionObserver((entries) => {
+// Scroll reveal — observe all .reveal elements
+const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
+      revealObs.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-// Active nav link on scroll
+// Active nav link highlight on scroll
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section[id]');
 
-const navObserver = new IntersectionObserver((entries) => {
+const navObs = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active) active.classList.add('active');
+      navLinks.forEach(l => l.classList.remove('active'));
+      const match = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (match) match.classList.add('active');
     }
   });
-}, { rootMargin: '-52px 0px -60% 0px', threshold: 0 });
+}, { rootMargin: '-60px 0px -60% 0px', threshold: 0 });
 
-sections.forEach(section => navObserver.observe(section));
+sections.forEach(s => navObs.observe(s));
