@@ -1,41 +1,42 @@
-// Mobile nav toggle
-function toggleNav() {
-  document.querySelector('.nav-links').classList.toggle('open');
-  document.querySelector('.nav-toggle').classList.toggle('open');
-}
+// Dot navigation — track active section
+const pages = document.getElementById('pages');
+const dots = document.querySelectorAll('.dot-nav .dot');
+const sections = document.querySelectorAll('.page');
 
-// Close mobile nav on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.remove('open');
-    document.querySelector('.nav-toggle').classList.remove('open');
+// Click dot to navigate
+dots.forEach(dot => {
+  dot.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(dot.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-// Scroll reveal — observe all .reveal elements
-const revealObs = new IntersectionObserver((entries) => {
+// Observe which section is in view
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObs.unobserve(entry.target);
+      const id = entry.target.id;
+      dots.forEach(d => d.classList.remove('active'));
+      const active = document.querySelector(`.dot-nav a[href="#${id}"]`);
+      if (active) active.classList.add('active');
     }
   });
-}, { threshold: 0.12 });
+}, {
+  root: pages,
+  threshold: 0.5
+});
 
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+sections.forEach(s => observer.observe(s));
 
-// Active nav link highlight on scroll
-const navLinks = document.querySelectorAll('.nav-links a');
-const sections = document.querySelectorAll('section[id]');
-
-const navObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(l => l.classList.remove('active'));
-      const match = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (match) match.classList.add('active');
-    }
-  });
-}, { rootMargin: '-60px 0px -60% 0px', threshold: 0 });
-
-sections.forEach(s => navObs.observe(s));
+// Keyboard navigation — arrow up/down to switch pages
+document.addEventListener('keydown', (e) => {
+  const currentIndex = [...dots].findIndex(d => d.classList.contains('active'));
+  if (e.key === 'ArrowDown' && currentIndex < dots.length - 1) {
+    e.preventDefault();
+    dots[currentIndex + 1].click();
+  } else if (e.key === 'ArrowUp' && currentIndex > 0) {
+    e.preventDefault();
+    dots[currentIndex - 1].click();
+  }
+});

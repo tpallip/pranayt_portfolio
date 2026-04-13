@@ -11,529 +11,365 @@
   </head>
 
   <body>
-    <!-- Dot Grid Overlay -->
     <div class="dot-grid"></div>
 
-    <!-- Navigation -->
-    <nav id="nav">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <a href="#home" class="nav-monogram">PT</a>
-          <span class="nav-name">Pranay Tummalapalli</span>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#beyond">Beyond Work</a></li>
-        </ul>
-        <div class="nav-right">
-          <a href="#contact" class="nav-contact-btn">Contact</a>
-        </div>
-        <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+    <!-- Dot Navigation -->
+    <nav class="dot-nav" id="dot-nav">
+      <a href="#home" class="dot active" data-label="Home"><span></span></a>
+      <a href="#about" class="dot" data-label="About"><span></span></a>
+      <a href="#experience" class="dot" data-label="Experience"><span></span></a>
+      <a href="#projects" class="dot" data-label="Projects"><span></span></a>
+      <a href="#education" class="dot" data-label="Education"><span></span></a>
+      <a href="#beyond" class="dot" data-label="Beyond"><span></span></a>
+      <a href="#contact" class="dot" data-label="Contact"><span></span></a>
     </nav>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <div class="hero-inner">
-        <div class="hero-left">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            EMBEDDED SOFTWARE ENGINEER
-          </div>
-          <h1 class="hero-name">PRANAY<br/>TUMMALAPALLI.</h1>
-          <p class="hero-tagline">
-            Architecting intuitive <span class="highlight">Human-Robot Interaction</span> powered by
-            <span class="highlight">LLMs</span>, grounded in real-world
-            <span class="highlight">Robotics</span> and high-performance
-            <span class="highlight">Embedded Systems</span>.
-          </p>
-          <div class="hero-actions">
-            <a href="./assets/resume.pdf" target="_blank" class="btn btn-outline">
-              View Resume <span class="btn-arrow">&rarr;</span>
-            </a>
-            <a href="#contact" class="btn btn-ghost">
-              Get in Touch <span class="btn-arrow">&nearr;</span>
-            </a>
-          </div>
-        </div>
+    <!-- Page Container -->
+    <div class="pages" id="pages">
 
-        <div class="hero-right">
-          <div class="hero-card">
-            <div class="card-avatar">
-              <img src="./assets/about-landing-profile/profile-pic-transparent.png" alt="Pranay Tummalapalli" />
+      <!-- Home / Hero -->
+      <section id="home" class="page page-hero">
+        <div class="hero-inner">
+          <div class="hero-left">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              EMBEDDED SOFTWARE ENGINEER
             </div>
-            <div class="card-status">
-              <span class="status-icon">+</span>
-              STATUS: Available for Projects
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <div>
-            <span class="stat-label">Specialty</span>
-            <span class="stat-value">Robotics</span>
-          </div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-          <div>
-            <span class="stat-label">Domain</span>
-            <span class="stat-value">Control Systems</span>
-          </div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6h18"/></svg>
-          <div>
-            <span class="stat-label">Focus</span>
-            <span class="stat-value">Embedded Systems</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-number">01</span>
-          <h2 class="section-title">ABOUT</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-image reveal">
-            <img src="./assets/about-landing-profile/linefollower-profile-pic.png" alt="Pranay with robot" />
-          </div>
-          <div class="about-text reveal">
-            <h3 class="about-heading">Hey There.</h3>
-            <p class="body-text">
-              <strong>I'm Pranay Tummalapalli,</strong> an embedded software and control systems engineer
-              with over 4 years of experience in robotics. I'm deeply passionate about robotic control
-              systems, algorithmic control, and building reliable, real-world robotic systems.
+            <h1 class="hero-name">PRANAY<br/>TUMMALAPALLI.</h1>
+            <p class="hero-tagline">
+              Architecting intuitive <span class="highlight">Human-Robot Interaction</span> powered by
+              <span class="highlight">LLMs</span>, grounded in real-world
+              <span class="highlight">Robotics</span> and high-performance
+              <span class="highlight">Embedded Systems</span>.
             </p>
-            <p class="body-text">
-              My work spans a wide spectrum — from humanoid upper-body robotic limbs to robot-assisted
-              laparoscopic and orthopaedic surgery platforms, and autonomous vehicle systems. I enjoy
-              developing systems that combine precision, safety, and intelligence.
-            </p>
-            <p class="body-text">
-              Outside of engineering, I am a classically trained tabla player. I'm also an avid
-              motorcycle touring enthusiast — long rides on open highways give me a sense of
-              freedom and clarity that fuels my creativity.
-            </p>
+            <div class="hero-actions">
+              <a href="./assets/resume.pdf" target="_blank" class="btn btn-outline">
+                View Resume <span class="btn-arrow">&rarr;</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                Get in Touch <span class="btn-arrow">&nearr;</span>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-number">02</span>
-          <h2 class="section-title">EXPERIENCE</h2>
-        </div>
-
-        <div class="exp-list">
-          <a href="./experience-pages/minuszero.html" class="exp-row reveal">
-            <div class="exp-row-left">
-              <span class="exp-date">Dec 2024 — Present</span>
-              <span class="exp-loc">Bengaluru, India</span>
-            </div>
-            <div class="exp-row-mid">
-              <h3 class="exp-role">Sr. Embedded Software Engineer</h3>
-              <p class="exp-company">Minus Zero Robotics</p>
-              <p class="exp-stack">Autonomous Driving / ADAS — C/C++, eCAL, Vehicle Motion Control</p>
-            </div>
-            <span class="exp-arrow">&rarr;</span>
-          </a>
-
-          <a href="./experience-pages/EmbeddedSE.html" class="exp-row reveal">
-            <div class="exp-row-left">
-              <span class="exp-date">Nov 2023 — Nov 2024</span>
-              <span class="exp-loc">IITM Research Park, Chennai</span>
-            </div>
-            <div class="exp-row-mid">
-              <h3 class="exp-role">Sr. Embedded Software Engineer</h3>
-              <p class="exp-company">Meril Healthcare Pvt. Ltd</p>
-              <p class="exp-stack">Robot Assisted Surgery — STM32H7, BLDC Motor Control, EtherCAT, Yocto</p>
-            </div>
-            <span class="exp-arrow">&rarr;</span>
-          </a>
-
-          <a href="./experience-pages/RoboticsSE.html" class="exp-row reveal">
-            <div class="exp-row-left">
-              <span class="exp-date">Jan 2023 — Nov 2023</span>
-              <span class="exp-loc">Bengaluru, India</span>
-            </div>
-            <div class="exp-row-mid">
-              <h3 class="exp-role">Robotics Systems Engineer</h3>
-              <p class="exp-company">Articulus Surgical</p>
-              <p class="exp-stack">Robot Assisted Surgery — ESP32, Kinematics, User Validation</p>
-            </div>
-            <span class="exp-arrow">&rarr;</span>
-          </a>
-
-          <a href="./experience-pages/RoboticsSE.html" class="exp-row reveal">
-            <div class="exp-row-left">
-              <span class="exp-date">Nov 2021 — Jan 2023</span>
-              <span class="exp-loc">Bengaluru, India</span>
-            </div>
-            <div class="exp-row-mid">
-              <h3 class="exp-role">Mechatronics Engineer</h3>
-              <p class="exp-company">Articulus Surgical</p>
-              <p class="exp-stack">Robot Assisted Surgery — Fusion 360, 3D Printing, DFM, Kinematics</p>
-            </div>
-            <span class="exp-arrow">&rarr;</span>
-          </a>
-
-          <a href="./experience-pages/CoFounderMechEngg.html" class="exp-row reveal">
-            <div class="exp-row-left">
-              <span class="exp-date">Jan 2021 — Oct 2021</span>
-              <span class="exp-loc">New Delhi, India</span>
-            </div>
-            <div class="exp-row-mid">
-              <h3 class="exp-role">Mechatronics Engg, Co-Founder</h3>
-              <p class="exp-company">Akshar Bionics</p>
-              <p class="exp-stack">Robotic Arm For Sign Language — Fusion 360, Kinematics, Motor Control</p>
-            </div>
-            <span class="exp-arrow">&rarr;</span>
-          </a>
-
-          <a href="./experience-pages/ProductDesign.html" class="exp-row reveal">
-            <div class="exp-row-left">
-              <span class="exp-date">Feb 2020 — Jul 2020</span>
-              <span class="exp-loc">New Delhi, India</span>
-            </div>
-            <div class="exp-row-mid">
-              <h3 class="exp-role">Product Design Intern</h3>
-              <p class="exp-company">Trestle Labs</p>
-              <p class="exp-stack">Kibo Reader for Visually Impaired — Fusion 360, Assembly Design, DFM</p>
-            </div>
-            <span class="exp-arrow">&rarr;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-number">03</span>
-          <h2 class="section-title">PROJECTS</h2>
-        </div>
-
-        <div class="projects-grid">
-          <a href="./projects/ethercat.html" class="project-card reveal">
-            <div class="project-img">
-              <img src="./assets/projects/ethercat.png" alt="EtherCAT Motor Driver" />
-            </div>
-            <div class="project-info">
-              <h3>EtherCAT Motor Driver</h3>
-              <p>BLDC FOC Control on STM32H755x dual-core</p>
-            </div>
-          </a>
-
-          <a href="./projects/latty.html" class="project-card reveal">
-            <div class="project-img project-placeholder">
-              <span>LATTY</span>
-            </div>
-            <div class="project-info">
-              <h3>Latty</h3>
-              <p>A ROS-based tricycle platform with sensor fusion</p>
-            </div>
-          </a>
-
-          <a href="./experience-pages/CoFounderMechEngg.html" class="project-card reveal">
-            <div class="project-img">
-              <img src="./assets/projects/p-1.png" alt="Robotic Hand" />
-            </div>
-            <div class="project-info">
-              <h3>Robotic Hand</h3>
-              <p>Speech to Sign Language conversion</p>
-            </div>
-          </a>
-
-          <a href="./experience-pages/RoboticsSE.html" class="project-card reveal">
-            <div class="project-img">
-              <img src="./assets/projects/p-2.jpg" alt="Pulsar Surgery Robot" />
-            </div>
-            <div class="project-info">
-              <h3>Pulsar</h3>
-              <p>Robot Assisted Laparoscopic Surgery</p>
-            </div>
-          </a>
-
-          <a href="./experience-pages/ProductDesign.html" class="project-card reveal">
-            <div class="project-img">
-              <img src="./assets/projects/p-4.png" alt="Kibo Reader" />
-            </div>
-            <div class="project-info">
-              <h3>Kibo Reader</h3>
-              <p>Assistive reading device for visually impaired</p>
-            </div>
-          </a>
-
-          <a href="./projects/raah.html" class="project-card reveal">
-            <div class="project-img">
-              <img src="./assets/projects/p-5.png" alt="Project Raah" />
-            </div>
-            <div class="project-info">
-              <h3>Project Raah</h3>
-              <p>Assistive object interaction for visually impaired</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Awards -->
-        <div class="awards reveal">
-          <h3 class="awards-heading">Awards</h3>
-          <div class="awards-list">
-            <div class="award-row">
-              <span class="award-year">2021</span>
-              <div>
-                <p class="award-name">Best Student Award — ECE Department</p>
-                <p class="award-desc">Academic excellence, Bharati Vidyapeeth's College of Engineering</p>
+          <div class="hero-right">
+            <div class="hero-card">
+              <div class="card-avatar">
+                <img src="./assets/about-landing-profile/profile-pic-transparent.png" alt="Pranay Tummalapalli" />
               </div>
-            </div>
-            <div class="award-row">
-              <span class="award-year">2020</span>
-              <div>
-                <p class="award-name">1st Place — Hardware Productathon, E-Summit, IIT Roorkee</p>
-                <p class="award-desc">Project PriorFire — LoRaWAN sensor network for accident prevention</p>
-              </div>
-            </div>
-            <div class="award-row">
-              <span class="award-year">2018</span>
-              <div>
-                <p class="award-name">1st Place — Smart India Hackathon, IIT Kanpur</p>
-                <p class="award-desc">Project Lingua — Akshar Bionics. Funded by Ministry of Education, Govt. of India</p>
-              </div>
-            </div>
-            <div class="award-row">
-              <span class="award-year">2018</span>
-              <div>
-                <p class="award-name">1st Place — Technical Projects Exhibition, IEEE-MSIT</p>
-                <p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p>
-              </div>
-            </div>
-            <div class="award-row">
-              <span class="award-year">2018</span>
-              <div>
-                <p class="award-name">2nd Place — Technical Projects Exhibition, Fervour X, BVPIEEE</p>
-                <p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p>
+              <div class="card-status">
+                <span class="status-icon">+</span>
+                STATUS: Available for Projects
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-number">04</span>
-          <h2 class="section-title">EDUCATION</h2>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-top">
+        <div class="hero-stats">
+          <div class="stat">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             <div>
-              <h3>B.Tech — Electronics &amp; Communications Engineering</h3>
-              <p class="edu-school">Bharati Vidyapeeth's College of Engineering, New Delhi</p>
+              <span class="stat-label">Specialty</span>
+              <span class="stat-value">Robotics</span>
             </div>
-            <span class="edu-year">2017 — 2021</span>
           </div>
-          <p class="body-text">
-            Honoured with the Best Student Award in the ECE department. My college years were
-            shaped by hands-on innovation — from biomimetic robotic arms to assistive technologies.
-            These experiences, along with co-founding a robotics startup, helped me develop a
-            practical, problem-driven approach to engineering.
-          </p>
-          <div class="edu-images">
-            <img src="./assets/education/ed-1.png" alt="College campus" />
-            <img src="./assets/education/ed-2.png" alt="College activities" />
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-top">
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
             <div>
-              <h3>Developer Student Club — Tech Lead, RNIS</h3>
-              <p class="edu-school">DSC-BVP</p>
+              <span class="stat-label">Domain</span>
+              <span class="stat-value">Control Systems</span>
             </div>
-            <span class="edu-year">2018 — 2021</span>
           </div>
-          <p class="body-text">
-            Joined as a student volunteer, then appointed Co-Tech Lead for the Robotics and
-            Intelligent Systems chapter. Mentored first-year students through workshops on
-            robotics fundamentals, and guided team members on projects including spider-crawl
-            gaits for quadruped robots.
-          </p>
-          <div class="edu-videos">
-            <iframe src="https://www.youtube.com/embed/I_fioe9DFlE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/Abf9h6nJl9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-top">
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6h18"/></svg>
             <div>
-              <h3>High School — Science</h3>
-              <p class="edu-school">G.D. Goenka Public School, Dwarka, New Delhi</p>
+              <span class="stat-label">Focus</span>
+              <span class="stat-value">Embedded Systems</span>
             </div>
-            <span class="edu-year">2015 — 2017</span>
           </div>
-          <p class="body-text">
-            Scored 94.25% in CBSE board examinations. Represented school in inter-zonal badminton
-            and secured 3rd place in tabla solo instrumental at the zonal level.
-          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Beyond Work -->
-    <section id="beyond" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-number">05</span>
-          <h2 class="section-title">BEYOND WORK</h2>
-        </div>
-
-        <div class="beyond-intro reveal">
-          <h3>Social Impact</h3>
-          <p class="body-text">
-            I combine technical innovation with a commitment to meaningful social impact.
-            My projects focus on solving real challenges faced by underrepresented communities —
-            from assistive technologies for the visually impaired to a robotic hand that
-            translates spoken language into sign language in real time.
-          </p>
-        </div>
-
-        <div class="beyond-cards">
-          <div class="beyond-card reveal">
-            <div class="beyond-card-img">
-              <img src="./assets/social/s-1.png" alt="Akshar Bionics" />
+      <!-- About -->
+      <section id="about" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">ABOUT</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-image">
+              <img src="./assets/about-landing-profile/linefollower-profile-pic.png" alt="Pranay with robot" />
             </div>
-            <div class="beyond-card-body">
-              <h4>Inclusive Education for the Hearing-Disabled</h4>
-              <p>
-                Co-founded Akshar Bionics in 2021 to bridge learning gaps for children with
-                hearing disabilities. Built a robotic hand that converts speech to sign language
-                in real time. Won 1st place at Smart India Hackathon at IIT Kanpur and received
-                INR 10 Lakhs from the Ministry Innovation Council.
+            <div class="about-text">
+              <h3 class="about-heading">Hey There.</h3>
+              <p class="body-text">
+                <strong>I'm Pranay Tummalapalli,</strong> an embedded software and control systems engineer
+                with over 4 years of experience in robotics. I'm deeply passionate about robotic control
+                systems, algorithmic control, and building reliable, real-world robotic systems.
               </p>
-              <a href="./experience-pages/CoFounderMechEngg.html" class="text-link">Akshar Bionics &rarr;</a>
-            </div>
-          </div>
-
-          <div class="beyond-card reverse reveal">
-            <div class="beyond-card-img">
-              <img src="./assets/social/s-2.png" alt="Project Raah" />
-            </div>
-            <div class="beyond-card-body">
-              <h4>Assistive Device for the Visually Impaired</h4>
-              <p>
-                Project Raah — a wrist-wearable device with a camera for object localization
-                and recognition. Developed in collaboration with the Blind Relief Association
-                and Blind Welfare Society in Delhi.
+              <p class="body-text">
+                My work spans a wide spectrum — from humanoid upper-body robotic limbs to robot-assisted
+                laparoscopic and orthopaedic surgery platforms, and autonomous vehicle systems. I enjoy
+                developing systems that combine precision, safety, and intelligence.
               </p>
-              <a href="./projects/raah.html" class="text-link">Project Raah &rarr;</a>
+              <p class="body-text">
+                Outside of engineering, I am a classically trained tabla player. I'm also an avid
+                motorcycle touring enthusiast — long rides on open highways give me a sense of
+                freedom and clarity that fuels my creativity.
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="beyond-intro reveal">
-          <h3>Life Outside Engineering</h3>
-        </div>
-
-        <div class="beyond-tiles">
-          <div class="beyond-tile reveal">
-            <div class="beyond-tile-img">
-              <img src="./assets/cultural/biking.jpg" alt="Motorcycling" />
-            </div>
-            <h4>Motorcycling</h4>
-            <p>
-              Travelled close to 7,000 km around Bengaluru — exploring forests, hill stations,
-              and winding backroads. Long-distance touring is how I reset, reflect, and reconnect.
-            </p>
+      <!-- Experience -->
+      <section id="experience" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">EXPERIENCE</h2>
           </div>
-
-          <div class="beyond-tile reveal">
-            <div class="beyond-tile-img">
-              <img src="./assets/social/s-4.png" alt="Tabla" />
-            </div>
-            <h4>Tabla</h4>
-            <p>
-              Classically trained since age eight under the Farukhabad gharana tradition.
-              Performed solo pieces at multiple venues and secured 3rd place at zonal level in Delhi.
-            </p>
+          <div class="exp-list">
+            <a href="./experience-pages/minuszero.html" class="exp-row">
+              <div class="exp-row-left">
+                <span class="exp-date">Dec 2024 — Present</span>
+                <span class="exp-loc">Bengaluru, India</span>
+              </div>
+              <div class="exp-row-mid">
+                <h3 class="exp-role">Sr. Embedded Software Engineer</h3>
+                <p class="exp-company">Minus Zero Robotics</p>
+                <p class="exp-stack">Autonomous Driving / ADAS — C/C++, eCAL, Vehicle Motion Control</p>
+              </div>
+              <span class="exp-arrow">&rarr;</span>
+            </a>
+            <a href="./experience-pages/EmbeddedSE.html" class="exp-row">
+              <div class="exp-row-left">
+                <span class="exp-date">Nov 2023 — Nov 2024</span>
+                <span class="exp-loc">IITM Research Park, Chennai</span>
+              </div>
+              <div class="exp-row-mid">
+                <h3 class="exp-role">Sr. Embedded Software Engineer</h3>
+                <p class="exp-company">Meril Healthcare Pvt. Ltd</p>
+                <p class="exp-stack">Robot Assisted Surgery — STM32H7, BLDC Motor Control, EtherCAT, Yocto</p>
+              </div>
+              <span class="exp-arrow">&rarr;</span>
+            </a>
+            <a href="./experience-pages/RoboticsSE.html" class="exp-row">
+              <div class="exp-row-left">
+                <span class="exp-date">Jan 2023 — Nov 2023</span>
+                <span class="exp-loc">Bengaluru, India</span>
+              </div>
+              <div class="exp-row-mid">
+                <h3 class="exp-role">Robotics Systems Engineer</h3>
+                <p class="exp-company">Articulus Surgical</p>
+                <p class="exp-stack">Robot Assisted Surgery — ESP32, Kinematics, User Validation</p>
+              </div>
+              <span class="exp-arrow">&rarr;</span>
+            </a>
+            <a href="./experience-pages/RoboticsSE.html" class="exp-row">
+              <div class="exp-row-left">
+                <span class="exp-date">Nov 2021 — Jan 2023</span>
+                <span class="exp-loc">Bengaluru, India</span>
+              </div>
+              <div class="exp-row-mid">
+                <h3 class="exp-role">Mechatronics Engineer</h3>
+                <p class="exp-company">Articulus Surgical</p>
+                <p class="exp-stack">Robot Assisted Surgery — Fusion 360, 3D Printing, DFM, Kinematics</p>
+              </div>
+              <span class="exp-arrow">&rarr;</span>
+            </a>
+            <a href="./experience-pages/CoFounderMechEngg.html" class="exp-row">
+              <div class="exp-row-left">
+                <span class="exp-date">Jan 2021 — Oct 2021</span>
+                <span class="exp-loc">New Delhi, India</span>
+              </div>
+              <div class="exp-row-mid">
+                <h3 class="exp-role">Mechatronics Engg, Co-Founder</h3>
+                <p class="exp-company">Akshar Bionics</p>
+                <p class="exp-stack">Robotic Arm For Sign Language — Fusion 360, Kinematics, Motor Control</p>
+              </div>
+              <span class="exp-arrow">&rarr;</span>
+            </a>
+            <a href="./experience-pages/ProductDesign.html" class="exp-row">
+              <div class="exp-row-left">
+                <span class="exp-date">Feb 2020 — Jul 2020</span>
+                <span class="exp-loc">New Delhi, India</span>
+              </div>
+              <div class="exp-row-mid">
+                <h3 class="exp-role">Product Design Intern</h3>
+                <p class="exp-company">Trestle Labs</p>
+                <p class="exp-stack">Kibo Reader for Visually Impaired — Fusion 360, Assembly Design, DFM</p>
+              </div>
+              <span class="exp-arrow">&rarr;</span>
+            </a>
           </div>
+        </div>
+      </section>
 
-          <div class="beyond-tile reveal">
-            <div class="beyond-tile-img">
-              <img src="./assets/social/s-5.png" alt="Badminton" />
+      <!-- Projects -->
+      <section id="projects" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">PROJECTS</h2>
+          </div>
+          <div class="projects-grid">
+            <a href="./projects/ethercat.html" class="project-card">
+              <div class="project-img"><img src="./assets/projects/ethercat.png" alt="EtherCAT Motor Driver" /></div>
+              <div class="project-info"><h3>EtherCAT Motor Driver</h3><p>BLDC FOC Control on STM32H755x dual-core</p></div>
+            </a>
+            <a href="./projects/latty.html" class="project-card">
+              <div class="project-img project-placeholder"><span>LATTY</span></div>
+              <div class="project-info"><h3>Latty</h3><p>A ROS-based tricycle platform with sensor fusion</p></div>
+            </a>
+            <a href="./experience-pages/CoFounderMechEngg.html" class="project-card">
+              <div class="project-img"><img src="./assets/projects/p-1.png" alt="Robotic Hand" /></div>
+              <div class="project-info"><h3>Robotic Hand</h3><p>Speech to Sign Language conversion</p></div>
+            </a>
+            <a href="./experience-pages/RoboticsSE.html" class="project-card">
+              <div class="project-img"><img src="./assets/projects/p-2.jpg" alt="Pulsar Surgery Robot" /></div>
+              <div class="project-info"><h3>Pulsar</h3><p>Robot Assisted Laparoscopic Surgery</p></div>
+            </a>
+            <a href="./experience-pages/ProductDesign.html" class="project-card">
+              <div class="project-img"><img src="./assets/projects/p-4.png" alt="Kibo Reader" /></div>
+              <div class="project-info"><h3>Kibo Reader</h3><p>Assistive reading device for visually impaired</p></div>
+            </a>
+            <a href="./projects/raah.html" class="project-card">
+              <div class="project-img"><img src="./assets/projects/p-5.png" alt="Project Raah" /></div>
+              <div class="project-info"><h3>Project Raah</h3><p>Assistive object interaction for visually impaired</p></div>
+            </a>
+          </div>
+          <div class="awards">
+            <h3 class="awards-heading">Awards</h3>
+            <div class="awards-list">
+              <div class="award-row"><span class="award-year">2021</span><div><p class="award-name">Best Student Award — ECE Department</p><p class="award-desc">Academic excellence, Bharati Vidyapeeth's College of Engineering</p></div></div>
+              <div class="award-row"><span class="award-year">2020</span><div><p class="award-name">1st Place — Hardware Productathon, E-Summit, IIT Roorkee</p><p class="award-desc">Project PriorFire — LoRaWAN sensor network for accident prevention</p></div></div>
+              <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">1st Place — Smart India Hackathon, IIT Kanpur</p><p class="award-desc">Project Lingua — Akshar Bionics. Funded by Ministry of Education, Govt. of India</p></div></div>
+              <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">1st Place — Technical Projects Exhibition, IEEE-MSIT</p><p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p></div></div>
+              <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">2nd Place — Technical Projects Exhibition, Fervour X, BVPIEEE</p><p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p></div></div>
             </div>
-            <h4>Badminton</h4>
-            <p>
-              Playing since age nine. Represented school at inter-zonal level and
-              competed in the CBSE North Zone Tournament.
-            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section section-contact">
-      <div class="container contact-center">
-        <div class="section-header">
-          <span class="section-number">06</span>
-          <h2 class="section-title">CONTACT</h2>
+      <!-- Education -->
+      <section id="education" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">EDUCATION</h2>
+          </div>
+          <div class="edu-card">
+            <div class="edu-top">
+              <div><h3>B.Tech — Electronics &amp; Communications Engineering</h3><p class="edu-school">Bharati Vidyapeeth's College of Engineering, New Delhi</p></div>
+              <span class="edu-year">2017 — 2021</span>
+            </div>
+            <p class="body-text">Honoured with the Best Student Award in the ECE department. My college years were shaped by hands-on innovation — from biomimetic robotic arms to assistive technologies. These experiences, along with co-founding a robotics startup, helped me develop a practical, problem-driven approach to engineering.</p>
+            <div class="edu-images">
+              <img src="./assets/education/ed-1.png" alt="College campus" />
+              <img src="./assets/education/ed-2.png" alt="College activities" />
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-top">
+              <div><h3>Developer Student Club — Tech Lead, RNIS</h3><p class="edu-school">DSC-BVP</p></div>
+              <span class="edu-year">2018 — 2021</span>
+            </div>
+            <p class="body-text">Joined as a student volunteer, then appointed Co-Tech Lead for the Robotics and Intelligent Systems chapter. Mentored first-year students through workshops on robotics fundamentals, and guided team members on projects including spider-crawl gaits for quadruped robots.</p>
+            <div class="edu-videos">
+              <iframe src="https://www.youtube.com/embed/I_fioe9DFlE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/Abf9h6nJl9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-top">
+              <div><h3>High School — Science</h3><p class="edu-school">G.D. Goenka Public School, Dwarka, New Delhi</p></div>
+              <span class="edu-year">2015 — 2017</span>
+            </div>
+            <p class="body-text">Scored 94.25% in CBSE board examinations. Represented school in inter-zonal badminton and secured 3rd place in tabla solo instrumental at the zonal level.</p>
+          </div>
         </div>
-        <h3 class="contact-heading">Let's Talk.</h3>
-        <p class="body-text">
-          Meaningful connections begin with conversations. Reach out and let's
-          collaborate or share ideas.
-        </p>
-        <a href="mailto:pranay.tummalapalli@gmail.com" class="contact-email">pranay.tummalapalli@gmail.com</a>
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/pranay-tummalapalli/" target="_blank" class="social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://github.com/pranaytummalapalli" target="_blank" class="social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <span class="footer-copy">&copy; 2025 Pranay Tummalapalli</span>
-        <span class="footer-location">Bengaluru, India</span>
-        <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/pranay-tummalapalli/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/pranaytummalapalli" target="_blank">GitHub</a>
+      <!-- Beyond Work -->
+      <section id="beyond" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">BEYOND WORK</h2>
+          </div>
+          <div class="beyond-intro">
+            <h3>Social Impact</h3>
+            <p class="body-text">I combine technical innovation with a commitment to meaningful social impact. My projects focus on solving real challenges faced by underrepresented communities — from assistive technologies for the visually impaired to a robotic hand that translates spoken language into sign language in real time.</p>
+          </div>
+          <div class="beyond-cards">
+            <div class="beyond-card">
+              <div class="beyond-card-img"><img src="./assets/social/s-1.png" alt="Akshar Bionics" /></div>
+              <div class="beyond-card-body">
+                <h4>Inclusive Education for the Hearing-Disabled</h4>
+                <p>Co-founded Akshar Bionics in 2021 to bridge learning gaps for children with hearing disabilities. Built a robotic hand that converts speech to sign language in real time. Won 1st place at Smart India Hackathon at IIT Kanpur and received INR 10 Lakhs from the Ministry Innovation Council.</p>
+                <a href="./experience-pages/CoFounderMechEngg.html" class="text-link">Akshar Bionics &rarr;</a>
+              </div>
+            </div>
+            <div class="beyond-card reverse">
+              <div class="beyond-card-img"><img src="./assets/social/s-2.png" alt="Project Raah" /></div>
+              <div class="beyond-card-body">
+                <h4>Assistive Device for the Visually Impaired</h4>
+                <p>Project Raah — a wrist-wearable device with a camera for object localization and recognition. Developed in collaboration with the Blind Relief Association and Blind Welfare Society in Delhi.</p>
+                <a href="./projects/raah.html" class="text-link">Project Raah &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="beyond-intro"><h3>Life Outside Engineering</h3></div>
+          <div class="beyond-tiles">
+            <div class="beyond-tile">
+              <div class="beyond-tile-img"><img src="./assets/cultural/biking.jpg" alt="Motorcycling" /></div>
+              <h4>Motorcycling</h4>
+              <p>Travelled close to 7,000 km around Bengaluru — exploring forests, hill stations, and winding backroads. Long-distance touring is how I reset, reflect, and reconnect.</p>
+            </div>
+            <div class="beyond-tile">
+              <div class="beyond-tile-img"><img src="./assets/social/s-4.png" alt="Tabla" /></div>
+              <h4>Tabla</h4>
+              <p>Classically trained since age eight under the Farukhabad gharana tradition. Performed solo pieces at multiple venues and secured 3rd place at zonal level in Delhi.</p>
+            </div>
+            <div class="beyond-tile">
+              <div class="beyond-tile-img"><img src="./assets/social/s-5.png" alt="Badminton" /></div>
+              <h4>Badminton</h4>
+              <p>Playing since age nine. Represented school at inter-zonal level and competed in the CBSE North Zone Tournament.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="page page-contact">
+        <div class="page-content contact-center">
+          <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title">CONTACT</h2>
+          </div>
+          <h3 class="contact-heading">Let's Talk.</h3>
+          <p class="body-text">Meaningful connections begin with conversations. Reach out and let's collaborate or share ideas.</p>
+          <a href="mailto:pranay.tummalapalli@gmail.com" class="contact-email">pranay.tummalapalli@gmail.com</a>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/pranay-tummalapalli/" target="_blank" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/pranaytummalapalli" target="_blank" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+          <div class="footer-inline">
+            <span>&copy; 2025 Pranay Tummalapalli</span>
+            <span>Bengaluru, India</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
 
     <script src="script.js"></script>
   </body>
