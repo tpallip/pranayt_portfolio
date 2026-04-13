@@ -211,6 +211,7 @@ html {
 .page-hero {
   padding-left: 80px;
   padding-right: 32px;
+  flex-direction: column;
 }
 
 .hero-inner {
