@@ -232,11 +232,11 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-name {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(52px, 7vw, 96px);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 0.95;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.03em;
   margin-bottom: 28px;
   color: var(--text);
 }
