@@ -114,7 +114,9 @@ img { max-width: 100%; display: block; }
 .dot.active span {
   opacity: 1;
   background: var(--text);
-  transform: scale(1.4);
+  width: 10px;
+  height: 14px;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
 }
 
 .dot:hover span {
@@ -124,7 +126,7 @@ img { max-width: 100%; display: block; }
 
 .dot.active:hover span {
   opacity: 1;
-  transform: scale(1.4);
+  transform: none;
 }
 
 /* Tooltip label */
