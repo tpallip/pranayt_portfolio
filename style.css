@@ -789,9 +789,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* --- Awards --- */
-.awards { border-top: 1px solid var(--border); padding-top: 40px; }
-.awards-heading { font-size: 18px; font-weight: 500; margin-bottom: 20px; }
-
 .award-row {
   display: flex; gap: 28px; padding: 14px 0;
   border-bottom: 1px solid var(--border); align-items: baseline;
