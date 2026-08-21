@@ -417,7 +417,8 @@ img { max-width: 100%; display: block; }
   width: min(100%, 420px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   filter: grayscale(0.3);
 }
