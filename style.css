@@ -627,6 +627,8 @@ img { max-width: 100%; display: block; }
   padding: 160px 32px 120px;
 }
 
+.article-list-page.wide { max-width: 1100px; }
+
 .article-list-heading {
   font-family: var(--font-mono);
   font-size: 12px;
