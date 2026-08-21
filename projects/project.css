@@ -23,7 +23,7 @@
 }
 
 .project-grid-subheading {
-  color: #848282;
+  color: var(--text-dim);
   font-size: 24px;
   font-weight: 300;
 }
@@ -31,11 +31,12 @@
 .project-grid-heading {
   font-size: 40px;
   font-weight: 300;
-  color: #424242;
+  color: var(--text);
 }
 
 .project-grid-tab {
-  background-color: #f8f8f8;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
   text-align: center;
   width: 50%;
   padding: 8px;
@@ -68,7 +69,7 @@
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  color: #b3b3b3;
+  color: var(--text-dim);
   font-size: 1.2rem;
   font-weight: 300;
   margin-top: 32px;
@@ -104,7 +105,7 @@
   align-items: center;
   gap: 8px;                  /* spacing between icon + text */
   text-decoration: none;
-  color: #000;
+  color: var(--text);
   font-size: 16px;
   font-weight: 400;
 }
@@ -113,6 +114,7 @@
   width: 40px;               /* small GitHub icon size */
   height: 40px;
   opacity: 0.9;
+  filter: invert(1);
 }
 
 .github-link a:hover img {

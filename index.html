@@ -6,26 +6,12 @@
     <title>Pranay Tummalapalli</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <div class="dot-grid"></div>
-
-    <!-- Floating Robotics Background -->
-    <div class="bg-floats" aria-hidden="true">
-      <svg class="bg-float f1" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1"><circle cx="30" cy="30" r="22"/><circle cx="30" cy="30" r="8"/><line x1="30" y1="8" x2="30" y2="0"/><line x1="30" y1="52" x2="30" y2="60"/><line x1="8" y1="30" x2="0" y2="30"/><line x1="52" y1="30" x2="60" y2="30"/></svg>
-      <svg class="bg-float f2" viewBox="0 0 80 40" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 20h20l5-10h10l5 10h20l5-10h10l5 10"/><circle cx="25" cy="10" r="2"/><circle cx="65" cy="10" r="2"/></svg>
-      <svg class="bg-float f3" viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="1"><rect x="10" y="10" width="30" height="30" rx="4"/><circle cx="20" cy="25" r="4"/><circle cx="35" cy="25" r="4"/><path d="M22 35h6"/></svg>
-      <svg class="bg-float f4" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 30a20 20 0 0140 0"/><path d="M18 30a12 12 0 0124 0"/><line x1="30" y1="30" x2="30" y2="50"/><circle cx="30" cy="30" r="3"/></svg>
-      <svg class="bg-float f5" viewBox="0 0 40 60" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 0v15M20 45v15"/><rect x="8" y="15" width="24" height="30" rx="3"/><circle cx="20" cy="30" r="6"/><line x1="14" y1="30" x2="26" y2="30"/><line x1="20" y1="24" x2="20" y2="36"/></svg>
-      <svg class="bg-float f6" viewBox="0 0 70 30" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 15h10l3-8h6l3 8h6l3-8h6l3 8h6l3-8h6l3 8h10"/></svg>
-      <span class="bg-float f7 bg-text">&lt;/&gt;</span>
-      <span class="bg-float f8 bg-text">0x3F</span>
-      <svg class="bg-float f9" viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="1"><circle cx="25" cy="25" r="20"/><path d="M25 5v8M25 37v8M5 25h8M37 25h8"/><rect x="18" y="18" width="14" height="14" rx="2"/></svg>
-      <svg class="bg-float f10" viewBox="0 0 60 40" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 35V15a10 10 0 0110-10h30a10 10 0 0110 10v20"/><circle cx="22" cy="20" r="5"/><circle cx="38" cy="20" r="5"/><path d="M26 30h8"/></svg>
-    </div>
+    <div class="grid-overlay" aria-hidden="true"></div>
 
     <!-- Dot Navigation -->
     <nav class="dot-nav" id="dot-nav">
@@ -33,6 +19,9 @@
       <a href="#about" class="dot" data-label="About"><span></span><em>About</em></a>
       <a href="#experience" class="dot" data-label="Experience"><span></span><em>Experience</em></a>
       <a href="#projects" class="dot" data-label="Projects"><span></span><em>Projects</em></a>
+      <a href="#awards" class="dot" data-label="Awards"><span></span><em>Awards</em></a>
+      <a href="#research" class="dot" data-label="Research"><span></span><em>Research</em></a>
+      <a href="#blog" class="dot" data-label="Blog"><span></span><em>Blog</em></a>
       <a href="#education" class="dot" data-label="Education"><span></span><em>Education</em></a>
       <a href="#beyond" class="dot" data-label="Beyond"><span></span><em>Beyond</em></a>
       <a href="#contact" class="dot" data-label="Contact"><span></span><em>Contact</em></a>
@@ -45,16 +34,21 @@
       <section id="home" class="page page-hero">
         <div class="hero-inner">
           <div class="hero-left">
+            <div class="hero-msc-tag">Pursuing MSc Robotics at University of Bristol</div>
             <div class="hero-badge">
               <span class="badge-dot"></span>
-              EMBEDDED SOFTWARE ENGINEER
+              ROBOTICS SOFTWARE ENGINEER
             </div>
             <h1 class="hero-name">PRANAY<br/>TUMMALAPALLI.</h1>
+            <p class="hero-subtitle">Surgical robotics &middot; autonomous systems &middot; vision-language-action models</p>
             <p class="hero-tagline">
-              Architecting intuitive <span class="highlight">Human-Robot Interaction</span> powered by
-              <span class="highlight">LLMs</span>, grounded in real-world
-              <span class="highlight">Robotics</span> and high-performance
-              <span class="highlight">Embedded Systems</span>.
+              Robotics engineer with five years building systems that have to work outside the lab:
+              <span class="highlight">surgical robots</span> taken through clinical validation,
+              <span class="highlight">autonomous driving</span> in Indian traffic, and
+              <span class="highlight">LLM inference</span> benchmarked on edge hardware.
+              Focused on rigorously evaluating how
+              <span class="highlight">vision-language-action models</span> hold up under real-world
+              perturbation, particularly in precision-critical domains like surgical manipulation.
             </p>
             <div class="hero-actions">
               <a href="./assets/resume.pdf" target="_blank" class="btn btn-outline">
@@ -68,7 +62,7 @@
           <div class="hero-right">
             <div class="hero-card">
               <div class="card-avatar">
-                <img src="./assets/about-landing-profile/profile-pic-transparent.png" alt="Pranay Tummalapalli" />
+                <img src="./assets/about-landing-profile/hero-pic.png" alt="Pranay Tummalapalli" />
               </div>
             </div>
           </div>
@@ -78,7 +72,7 @@
             <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             <div>
               <span class="stat-label">Specialty</span>
-              <span class="stat-value">Robotics</span>
+              <span class="stat-value">Real-World Systems</span>
             </div>
           </div>
           <div class="stat-divider"></div>
@@ -86,7 +80,7 @@
             <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
             <div>
               <span class="stat-label">Domain</span>
-              <span class="stat-value">Control Systems</span>
+              <span class="stat-value">Robotics</span>
             </div>
           </div>
           <div class="stat-divider"></div>
@@ -94,7 +88,7 @@
             <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6h18"/></svg>
             <div>
               <span class="stat-label">Focus</span>
-              <span class="stat-value">Embedded Systems</span>
+              <span class="stat-value">VLAs &amp; Learned Robotics Policies</span>
             </div>
           </div>
         </div>
@@ -109,24 +103,28 @@
           </div>
           <div class="about-grid">
             <div class="about-image">
-              <img src="./assets/about-landing-profile/linefollower-profile-pic.png" alt="Pranay with robot" />
+              <img src="./assets/about-landing-profile/about-pic.jpg" alt="Pranay Tummalapalli" />
             </div>
             <div class="about-text">
               <h3 class="about-heading">Hey There.</h3>
               <p class="body-text">
-                <strong>I'm Pranay Tummalapalli,</strong> an embedded software and control systems engineer
-                with over 4 years of experience in robotics. I'm deeply passionate about robotic control
-                systems, algorithmic control, and building reliable, real-world robotic systems.
+                <strong>I'm Pranay Tummalapalli,</strong> a robotics engineer with five years of experience
+                building systems that have to work outside the lab. Most of that time has been spent on
+                control systems and embedded software, and increasingly on the question of how learned
+                policies behave when they meet the real world.
               </p>
               <p class="body-text">
-                My work spans a wide spectrum — from humanoid upper-body robotic limbs to robot-assisted
-                laparoscopic and orthopaedic surgery platforms, and autonomous vehicle systems. I enjoy
-                developing systems that combine precision, safety, and intelligence.
+                My work spans humanoid upper-body robotic limbs, robot-assisted laparoscopic and
+                orthopaedic surgery platforms, and autonomous vehicle systems. The through-line has been
+                precision under real constraints: surgical systems taken through clinical validation, and
+                autonomous driving tested in Indian traffic rather than on a closed track. More recently
+                I've been working on vision-language-action models, and specifically on measuring where
+                they actually hold up under perturbation rather than assuming they do.
               </p>
               <p class="body-text">
-                Outside of engineering, I am a classically trained tabla player. I'm also an avid
-                motorcycle touring enthusiast — long rides on open highways give me a sense of
-                freedom and clarity that fuels my creativity.
+                Outside of engineering, I'm a classically trained tabla player. I also ride motorcycles,
+                mostly long-distance touring. Something about a few hundred kilometres of open highway
+                does more for a stuck problem than another hour at the desk.
               </p>
             </div>
           </div>
@@ -250,16 +248,72 @@
               <div class="project-info"><h3>Project Raah</h3><p>Assistive object interaction for visually impaired</p></div>
             </a>
           </div>
-          <div class="awards">
-            <h3 class="awards-heading">Awards</h3>
-            <div class="awards-list">
-              <div class="award-row"><span class="award-year">2021</span><div><p class="award-name">Best Student Award — ECE Department</p><p class="award-desc">Academic excellence, Bharati Vidyapeeth's College of Engineering</p></div></div>
-              <div class="award-row"><span class="award-year">2020</span><div><p class="award-name">1st Place — Hardware Productathon, E-Summit, IIT Roorkee</p><p class="award-desc">Project PriorFire — LoRaWAN sensor network for accident prevention</p></div></div>
-              <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">1st Place — Smart India Hackathon, IIT Kanpur</p><p class="award-desc">Project Lingua — Akshar Bionics. Funded by Ministry of Education, Govt. of India</p></div></div>
-              <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">1st Place — Technical Projects Exhibition, IEEE-MSIT</p><p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p></div></div>
-              <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">2nd Place — Technical Projects Exhibition, Fervour X, BVPIEEE</p><p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p></div></div>
-            </div>
+          <a href="./projects/index.html" class="view-all-link">View all projects &rarr;</a>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section id="awards" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">AWARDS</h2>
           </div>
+          <div class="awards-list">
+            <div class="award-row"><span class="award-year">2021</span><div><p class="award-name">Best Student Award — ECE Department</p><p class="award-desc">Academic excellence, Bharati Vidyapeeth's College of Engineering</p></div></div>
+            <div class="award-row"><span class="award-year">2020</span><div><p class="award-name">1st Place — Hardware Productathon, E-Summit, IIT Roorkee</p><p class="award-desc">Project PriorFire — LoRaWAN sensor network for accident prevention</p></div></div>
+            <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">1st Place — Smart India Hackathon, IIT Kanpur</p><p class="award-desc">Project Lingua — Akshar Bionics. Funded by Ministry of Education, Govt. of India</p></div></div>
+            <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">1st Place — Technical Projects Exhibition, IEEE-MSIT</p><p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p></div></div>
+            <div class="award-row"><span class="award-year">2018</span><div><p class="award-name">2nd Place — Technical Projects Exhibition, Fervour X, BVPIEEE</p><p class="award-desc">Project SSDr — Safety and Surveillance rover for disaster zones</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section id="research" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">RESEARCH</h2>
+          </div>
+          <div class="research-list">
+            <a href="./research/paper-1.html" class="research-row">
+              <div class="research-row-main">
+                <span class="research-tag">Preprint</span>
+                <h3 class="research-title">LLM Inference at the Edge: Mobile, NPU, and GPU Performance Efficiency Trade-offs Under Sustained Load</h3>
+                <p class="research-authors">Tummalapalli et al. &middot; arXiv, 2026</p>
+              </div>
+              <span class="research-arrow">&rarr;</span>
+            </a>
+            <a href="./research/paper-2.html" class="research-row">
+              <div class="research-row-main">
+                <span class="research-tag">Coming soon</span>
+                <h3 class="research-title">Classical and Learned Control Under Perturbation: A Crossover Study in Surgical Manipulation</h3>
+                <p class="research-authors">Coming soon</p>
+              </div>
+              <span class="research-arrow">&rarr;</span>
+            </a>
+          </div>
+          <a href="./research/index.html" class="view-all-link">View all research &rarr;</a>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section id="blog" class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title">BLOG</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="./blog/post-1.html" class="blog-card">
+              <span class="blog-tag">SAGE-VLA Series &middot; Part 1</span>
+              <h3 class="blog-title">Joint Space vs. 6D vs. SE(3): What Action Representation Actually Does to a Policy</h3>
+              <p class="blog-excerpt">Action representation turned out to be one of the highest-leverage decisions in the SAGE-VLA imitation-learning pipeline — with a real regression to prove it.</p>
+              <span class="blog-meta">SAGE-VLA project blog</span>
+            </a>
+          </div>
+          <a href="./blog/index.html" class="view-all-link">View all posts &rarr;</a>
         </div>
       </section>
 
@@ -267,7 +321,7 @@
       <section id="education" class="page">
         <div class="page-content">
           <div class="section-header">
-            <span class="section-number">04</span>
+            <span class="section-number">07</span>
             <h2 class="section-title">EDUCATION</h2>
           </div>
           <div class="edu-card">
@@ -306,7 +360,7 @@
       <section id="beyond" class="page">
         <div class="page-content">
           <div class="section-header">
-            <span class="section-number">05</span>
+            <span class="section-number">08</span>
             <h2 class="section-title">BEYOND WORK</h2>
           </div>
           <div class="beyond-intro">
@@ -356,7 +410,7 @@
       <section id="contact" class="page page-contact">
         <div class="page-content contact-center">
           <div class="section-header">
-            <span class="section-number">06</span>
+            <span class="section-number">09</span>
             <h2 class="section-title">CONTACT</h2>
           </div>
           <h3 class="contact-heading">Let's Talk.</h3>
