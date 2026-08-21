@@ -126,6 +126,8 @@ img { max-width: 100%; display: block; }
   align-items: center;
   position: relative;
   cursor: pointer;
+  padding: 10px;
+  margin: -10px;
 }
 
 .dot span {
@@ -965,6 +967,19 @@ img { max-width: 100%; display: block; }
   .award-row { flex-direction: column; gap: 4px; }
 
   .footer-inline { flex-direction: column; gap: 4px; }
+
+  .subpage-nav { padding: 20px; }
+
+  .article-list-page, .article-detail-page {
+    padding: 110px 20px 80px;
+  }
+
+  .article-list-title { font-size: 28px; }
+  .article-title { font-size: 24px; }
+
+  .paper-table th, .paper-table td { padding: 10px 14px; font-size: 13px; }
+
+  .blog-card, .research-row { padding: 22px 18px; }
 }
 
 @media (max-width: 480px) {

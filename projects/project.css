@@ -121,3 +121,26 @@
   opacity: 0.6;
 }
 
+@media (max-width: 900px) {
+  .project { padding: 120px 20px 60px; }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0;
+  }
+
+  .project-grid-heading { font-size: 28px; }
+  .project-grid-subheading { font-size: 18px; }
+
+  .project-grid-right { flex-direction: column; }
+
+  .project-videos {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .project-videos img { width: 70%; }
+}
+
