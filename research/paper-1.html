@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paper title goes here — Pranay Tummalapalli</title>
+    <title>LLM Inference at the Edge — Pranay Tummalapalli</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -17,21 +17,104 @@
     </header>
 
     <main class="article-detail-page">
-      <span class="article-tag">Placeholder</span>
-      <h1 class="article-title">Paper title goes here</h1>
-      <p class="article-meta">Author names &middot; Venue / Year &middot; Status (e.g. Preprint, Under Review, Published)</p>
+      <span class="article-tag">Preprint</span>
+      <h1 class="article-title">LLM Inference at the Edge: Mobile, NPU, and GPU Performance Efficiency Trade-offs Under Sustained Load</h1>
+      <p class="article-meta">Pranay Tummalapalli, Sahil Arayakandy, Ritam Pal, Kautuk Kundan &middot; arXiv, 2026</p>
 
       <div class="article-body">
+        <p class="paper-abstract">
+          Deploying large language models on-device for always-on personal agents demands sustained
+          inference from hardware tightly constrained in power, thermal envelope, and memory. We
+          benchmark Qwen 2.5 1.5B (4-bit quantised) across four platforms: a Raspberry Pi 5 with
+          Hailo-10H NPU, a Samsung Galaxy S24 Ultra, an iPhone 16 Pro, and a laptop NVIDIA RTX 4050
+          GPU. Using a fixed 258-token prompt over 20 warm-condition iterations per device, we
+          measure throughput, latency, power, and thermal behaviour. For mobile platforms, thermal
+          management supersedes peak compute as the primary constraint: the iPhone 16 Pro loses
+          nearly half its throughput within two iterations, and the S24 Ultra suffers a hard
+          OS-enforced GPU frequency floor that terminates inference entirely. On dedicated hardware,
+          distinct constraints dominate: the RTX 4050 is bounded by its battery power ceiling, while
+          the Hailo-10H is limited by on-module memory bandwidth. The RTX 4050 sustains 131.7 tok/s
+          at 34.1&nbsp;W; the Hailo-10H sustains 6.9&nbsp;tok/s at under 2&nbsp;W with near-zero
+          variance, matching the RTX 4050 in energy proportionality at 19&times; lower throughput.
+          Results should be interpreted as platform-level deployment characterisations for a single
+          model and prompt type, reflecting hardware and software combined, rather than general
+          claims about hardware capability alone.
+        </p>
+
+        <h2 class="paper-section-heading">Results</h2>
         <p>
-          Abstract goes here — a short summary of the paper's motivation, method, and findings.
-          Replace this placeholder once the paper is ready to publish.
+          Simplified summary — see the paper for full methodology, error bars, and per-run data.
+        </p>
+
+        <div class="paper-table-wrap">
+          <table class="paper-table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Throughput</th>
+                <th>Power</th>
+                <th>Energy / token</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RTX 4050 (laptop GPU)</td>
+                <td>131.7 tok/s</td>
+                <td>34.1 W</td>
+                <td>297.3 mJ</td>
+              </tr>
+              <tr>
+                <td>iPhone 16 Pro (Hot state)</td>
+                <td>23.7 tok/s</td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <td>Galaxy S24 Ultra (plateau)</td>
+                <td>10.4 tok/s</td>
+                <td>1.49 W</td>
+                <td>143.0 mJ</td>
+              </tr>
+              <tr>
+                <td>RPi 5 + Hailo-10H NPU</td>
+                <td>6.9 tok/s</td>
+                <td>1.87 W</td>
+                <td>270.5 mJ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="paper-figure">
+          <img src="../assets/research/fig_rtx_combined.png" alt="RTX 4050 throughput and temperature across runs 2–20" />
+          <figcaption>RTX 4050: throughput stays stable around 131.7 tok/s as GPU temperature climbs from 55°C to 70°C — no throttling observed.</figcaption>
+        </figure>
+
+        <figure class="paper-figure">
+          <img src="../assets/research/fig_hailo_tps_temp.png" alt="Raspberry Pi 5 with Hailo-10H throughput and temperature across runs 2–20" />
+          <figcaption>Raspberry Pi 5 + Hailo-10H: near-zero variance in throughput (CV 0.04%) with stable temperatures — the most predictable platform tested.</figcaption>
+        </figure>
+
+        <figure class="paper-figure">
+          <img src="../assets/research/fig_iphone_tps.png" alt="iPhone 16 Pro per-iteration throughput across 20 iterations" />
+          <figcaption>iPhone 16 Pro: a clear three-phase thermal trajectory — Normal, Warm, then Hot — with throughput dropping 41.5% from its peak before settling at a 23.67 tok/s plateau.</figcaption>
+        </figure>
+
+        <figure class="paper-figure">
+          <img src="../assets/research/fig_s24_combined.png" alt="Samsung Galaxy S24 Ultra per-iteration throughput and temperature" />
+          <figcaption>Galaxy S24 Ultra: a gradual DVFS-regulated decline rather than a sharp cliff, settling at a 10.38 tok/s plateau.</figcaption>
+        </figure>
+
+        <p>
+          The headline result: no single platform wins outright. Each occupies a distinct
+          throughput/power/stability point, and mobile devices are gated by thermals long before
+          they're gated by raw compute.
         </p>
       </div>
 
       <div class="article-links">
-        <a href="#">PDF</a>
-        <a href="#">arXiv</a>
-        <a href="#">Code</a>
+        <a href="https://arxiv.org/abs/2603.23640" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://arxiv.org/pdf/2603.23640" target="_blank" rel="noopener">PDF</a>
       </div>
     </main>
   </body>
