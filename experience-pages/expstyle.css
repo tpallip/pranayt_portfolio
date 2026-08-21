@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.experience-page {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;;
+  padding: 100px 32px;
+  gap: 48px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.designation {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.company {
+  margin-top: 12px;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.location {
+  margin-top: 12px;
+  font-size: 26px;
+  font-weight: 275;
+}
+
+.middle-container {
+  padding-top: 8px;
+  max-width: 600px;;
+}
+
+.text {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.sub-heading {
+  font-weight: 500;
+  /* display: flex;
+  justify-content: center; */
+  font-size: 28px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+.right-container p {
+  flex: 0 0 100%; /* increase width of right column */
+}
+
+.arrow {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.right-container img {
+  width: 100%;
+  border-radius: 64px;
+  padding: 0px 32px;
+}
+
+.media-gallery {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.media-gallery-1 {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.media-gallery-2 {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.media-images {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.media-images img {
+  width: 45%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.media-images-meril {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.media-images-meril img {
+  width: 75%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.media-video {
+  display: flex;
+  justify-content: center;
+}
+
+.media-video-2 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.media-video iframe {
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+  border-radius: 12px;
+}
+
+.media-video-2 iframe {
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+  border-radius: 12px;
+}
+
+.image-heading {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-video-mz {
+  display: flex;
+  justify-content: center;
+}
+
+.media-video-mz iframe {
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+  border-radius: 12px;
+}
+

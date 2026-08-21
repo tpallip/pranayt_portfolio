@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Software Engineer</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./expstyle.css" />
+  </head>
+  <body>
+    <header class="subpage-nav">
+      <a href="../index.html" class="subpage-back">&larr; Pranay Tummalapalli</a>
+    </header>
+    <section class="experience-page">
+      <div class="left-container">
+        <p class="designation">
+          Robotics Systems Engineer Articulus Surgical, 2021 - 2023
+        </p>
+        <h2 class="company">Pulsar Robot Assisted Laparoscopic Surgery</h2>
+        <p class="location">Bengaluru, India</p>
+      </div>
+      <div class="middle-container">
+        <p class="text">
+          I joined Articulus Surgical at its inception as a founding team 
+          member and one of its first contributors. The vision — building 
+          an indigenous, sustainable and accessible robot-assisted surgery (RAS) 
+          system to bring advanced medical technology within reach of more people — 
+          served as our north star.
+          <br />
+          <br />
+          Articulus is a team of ambitious engineers from diverse backgrounds, 
+          founded by Mr. Saurya Mishra, a post-graduate from IIT Kharagpur with 
+          over a decade of experience in medical devices at companies such as 
+          Philips Healthcare.
+          <br />
+          <br />
+          <span class="sub-heading">Pulsar Robot Assisted Laparoscopy </span>
+          <br />
+          <br />
+          I began my journey at Articulus as a mechatronics engineer in November 
+          2021, tasked with ideating and developing mechanisms for a 6-DOF 
+          remote-centre robot based on a circular carriage-driver gantry. 
+          Later, I took ownership of the end-to-end design and development of 
+          the surgeon’s console, which involved designing joints and the structure 
+          of a 7-DOF serial manipulator.
+          <br />
+          <br />
+          Because the console used passive joints, gravity compensation 
+          (initially via counterbalance and later using springs) was a 
+          significant design challenge. The mechanism I designed was described 
+          by several doctors and investors as being “as smooth as a motor-driver 
+          mechanism.” Alongside mechanical design, I led industrial design and 
+          user experience efforts for all R&D projects.
+          <br />
+          <br />
+          Given the small team size, I also developed firmware on an ESP32 (ESP-IDF) 
+          to read absolute joint encoders and convert readings to joint angles. 
+          That data stream was transmitted over RS-232 to a PC, where it fed into 
+          a forward kinematics model to compute end-effector parameters.
+          <br />
+          <br />
+          Later, I gained hands-on experience in PID controller design and tuning 
+          for DC motors. I implemented the controllers on an RP2040 using the 
+          PICO-SDK and deployed them to robot joint actuators.
+          <br />
+          <br />
+          <span class="sub-heading"
+            >Comet Handheld Motorised Laparoscopic
+          </span>
+          <br />
+          <br />
+          As a spin-off project, I designed a handheld motorised laparoscopic 
+          instrument to control a 3-DOF end-effector. The capstan mechanism 
+          concept was adapted from the Pulsar instrument. Surgeon arm 
+          motion was encoded using a 3-DOF gimbal and translated into joint 
+          angles for the instrument.
+        </p>
+
+        <div class="media-gallery-1">
+
+          <!-- Images Row -->
+          <div class="media-images">
+            <img src="../assets/expPage/GY1.png" alt="Articulus Prototype Image 1" />
+            <img src="../assets/expPage/GY2.png" alt="Articulus Prototype Image 2" />
+          </div>
+
+        </div>
+
+        <div class="media-gallery-2">
+
+          <!-- Images Row -->
+          <div class="media-images">
+            <img src="../assets/expPage/FG1.png" alt="Articulus Prototype Image 3" />
+            <img src="../assets/expPage/FG2.png" alt="Articulus Prototype Image 4" />
+          </div>
+
+        </div>
+
+        <div class="image-heading">
+          <p>
+            (top) 4DOF Gymbal of the 7DOF surgeon's console.
+            <br />
+            (bottom) Fingergrip of the surgeon’s console.
+          </p>
+        </div>
+      </div>
+      <div class="right-container">
+        <img src="../assets/expPage/img_2.jpeg" />
+
+        <!-- <p>
+          Pulsar Robotic Surgery System
+          <span class="arrow">&rightarrow;</span>
+        </p>
+
+        <p>
+          Comet Handheld Robotic Instrument
+          <span class="arrow">&rightarrow;</span> -->
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
