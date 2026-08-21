@@ -703,6 +703,11 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
+.article-links-top {
+  margin-top: -16px;
+  margin-bottom: 40px;
+}
+
 .article-links a {
   font-family: var(--font-mono);
   font-size: 12px;
